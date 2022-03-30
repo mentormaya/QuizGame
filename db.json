@@ -1,0 +1,35 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "what is the height of Mount Everest?",
+      "type": "MCQ_TEXT",
+      "options": [
+        {
+          "a": 2348
+        },
+        {
+          "b": 3948
+        },
+        {
+          "c": 1548
+        },
+        {
+          "d": 8848
+        }
+      ],
+      "correct_option": "d"
+    }
+  ],
+  "users": [
+    {
+      "username": "ajay",
+      "secret": "loveMe",
+      "full_name": "Ajay Kumar Singh"
+    }
+  ],
+  "settings": {
+    "APP_NAME": "Quiz Application",
+    "VERSION": "0.1.0"
+  }
+}
