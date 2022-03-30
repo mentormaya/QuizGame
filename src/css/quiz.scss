@@ -1,3 +1,5 @@
+$bodyColor: rgb(124, 122, 238);
+
 *, *:before, *:after{
     box-sizing: border-box;
 }
@@ -20,27 +22,15 @@ footer, header, nav, section, main{
 
 body{
     line-height: 1;
+    background-color: $bodyColor;
 }
 
-ol, ul{
-    list-style: none;
-}
-
-blockquote, q{
-    quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after{
-    content: '';
-    content: none;
-}
-
-table{
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-input{
-    -webkit-appearance: none;
-    border-radius: 0;
+.quiz-container{
+    height: 95vh;
+    width: 95vw;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-rows: 50px 8fr 50px;
+    justify-content: center;
+    align-content: center;
 }
