@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 1,
-      "question": "what is the height of Mount Everest?",
+      "question": "What is the height of Mount Everest?",
       "type": "MCQ_TEXT",
       "options": [
         {

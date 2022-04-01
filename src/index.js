@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Quiz from './components/Quiz'
+import './css/index.scss'
+import Quiz from './components/Quiz/Quiz'
 
 ReactDOM.render(
   <React.StrictMode>

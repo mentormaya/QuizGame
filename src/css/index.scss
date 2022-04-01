@@ -1,4 +1,4 @@
-$bodyColor: rgb(124, 122, 238);
+$body-color: rgb(112, 157, 209);
 
 *, *:before, *:after{
     box-sizing: border-box;
@@ -22,15 +22,5 @@ footer, header, nav, section, main{
 
 body{
     line-height: 1;
-    background-color: $bodyColor;
-}
-
-.quiz-container{
-    height: 95vh;
-    width: 95vw;
-    background-color: aquamarine;
-    display: grid;
-    grid-template-rows: 50px 8fr 50px;
-    justify-content: center;
-    align-content: center;
+    background-color: $body-color;
 }
