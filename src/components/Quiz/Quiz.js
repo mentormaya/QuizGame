@@ -1,52 +1,75 @@
-import React from 'react'
-import './quiz.scss'
+import React from "react";
+import "./quiz.scss";
+import Header from "./Header/Header.js";
+import Footer from "./Footer/Footer.js";
+import Groups from "./Groups/Groups.js";
+import Hystory from "./Hystory/Hystory.js";
+import Question from "./Question/Question.js";
+import Options from "./Options/Options.js";
+import QuestionSelector from "./QuestionSelector/QuestionSelector.js";
 
 function Quiz() {
   let date = new Date();
-  const year = date.getFullYear('YYYY').toString();
+  const year = date.getFullYear("YYYY").toString();
 
-  console.log(year)
+  // console.log(year)
+
+  //title for the Quiz
+
+  const title = "नेपाल राष्ट्र बैंक जनकपुर कार्यालय";
+
+  const message =
+    "नेपाल राष्ट्र बैंककाे ६७औं जयन्तिकाे सुअवसरमा आयाेजित हाजिरी जवाफ प्रतियाेगिता ।";
+
+    let question = {
+      "id": 1,
+      "question": "What is the height of Mount Everest?",
+      "type": "MCQ_TEXT",
+      "extra": {
+        "type": "PHOTO",
+        "resource": "assets/Questions/Everest.png"
+      },
+      "options": [
+        {
+          "a": 2348
+        },
+        {
+          "b": 3948
+        },
+        {
+          "c": 1548
+        },
+        {
+          "d": 8848
+        }
+      ],
+      "correct_option": "d"
+    }
+
   return (
-    <div className='quiz-container'>
-      <header className='quiz-header'>
-        <div className="brand-logo">
-          <img src="/assets/QuizLogo-removebg.png" alt="Quiz Logo" />
-        </div>
-        <div className="banner">
-          <div className="title">Nepal Rastra Bank Quiz</div>
-          <div className="message">Organized on the auspicious moment of Happy Birthday 😜😜</div>
-        </div>
-        <div className="settings">
-          <img src="/assets/settings-icon-removebg.png" alt="Quiz Settings" />
-        </div>
-      </header>
-      <div className='quiz-body'>
-        <aside className='left-side-bar'>Left Side Bar</aside>
-        <main className='main-container'>
+    <div className="quiz-container">
+      <Header title={title} message={message} />
+      <div className="quiz-body">
+        <aside className="left-side-bar">
+          <Groups />
+          <Hystory />
+        </aside>
+        <main className="main-container">
           <section className="question-area">
-            <article className="question">What is the height of Mount Everest?</article>
-            <article className='q-extra-content'>
-              <img src="#" alt=""/>
-            </article>
+            <Question question={question}/>
           </section>
           <section className="options-area">
-
+            <Options options={question.options}/>
           </section>
         </main>
-        <aside className='right-side-bar'>Right Side Bar</aside>
+        <aside className="right-side-bar">
+          <QuestionSelector />
+          <h1>Timer and Controls</h1>
+        </aside>
       </div>
-      <footer className='quiz-footer'>
-        <div className="copyright">
-          &copy; Copyright &nbsp;
-          <a href="https://mentormaya.com/" title='Ajay Singh'>@mentormaya</a>&nbsp;
-          { year === "2022" ? '2022' : `2022 - ${year}`}. 
-        </div>
-        <div className="rights-info">
-          All the rights are reserved.
-        </div>
-      </footer>
+      <Footer year={year} />
     </div>
-  )
+  );
 }
 
-export default Quiz
+export default Quiz;

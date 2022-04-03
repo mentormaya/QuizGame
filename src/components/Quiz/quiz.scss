@@ -20,76 +20,17 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
     text-align: center;
     color: $primary-text-color;
 
-    header.quiz-header{
-        background-color: $q-light-grey-color;
-        height: 7em;
-        padding: 1em;
-        display: grid;
-        gap: 0.1em;
-        grid-template-columns: 20% 1fr auto;
-        .brand-logo,
-        .settings{
-            display: grid;
-            place-content: center;
-            background-color: $q-grey-color;
-            border-radius: 0.8em;
-            border: 2px solid $primary-text-color;
-            cursor: pointer;
-            box-shadow: $box-shadow;
-            img {
-                transform: scale(0.6);
-            }
-        }
-
-        .banner{
-            background-color: $q-grey-color;
-            border-radius: 0.8em;
-            border: 2px solid $primary-text-color;
-            box-shadow: $box-shadow;
-            display: grid;
-            place-content: center;
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr;
-            .title{
-                // background-color: #12E935;
-                width: 100%;
-                font-size: 1.8rem;
-                font-family: 'Lobster';
-                line-height: 2.1rem;
-                padding: 0.2em;
-            }
-            .message{
-                background-color: $blue-text-color;
-                border-radius: 0.8em;
-                display: grid;
-                place-content: center;
-                border-top: 2px solid $primary-text-color;
-                border-bottom: 2px solid $primary-text-color;
-            }
-        }
-        
-    }
     .quiz-body{
         background-color: $q-light-grey-color;
-    }
-    footer.quiz-footer{
-        background-color: $q-grey-color;
-        box-shadow: $box-shadow;
-        border-radius: 0.8em;
-        padding: 0.2em;
+        padding: 0.4em 1em;
         display: grid;
-        place-content: center;
-        a {
-            text-decoration: none;
-            font-style: italic;
-            color: $primary-text-color;
-        }
-        .copyright{
-            padding: .4em 0 0.1em 0;
-        }
-        .rights-info{
-            padding: 0.1em 0 0.4em 0;
-            text-decoration: underline;
+        grid-template-columns: minmax(20%,25%) 1fr minmax(20%,25%);
+
+        aside{
+            background-color: $q-grey-color;
+            border-top: 2px solid $primary-text-color;
+            border-bottom: 2px solid $primary-text-color;
+            border-radius: 0.8em;
         }
     }
 }

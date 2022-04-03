@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+$q-background-color: #d5b5f1;
+$border-color: #EAEAEA;
+$q-grey-color: #DDDDDD;
+$q-light-grey-color: #b9b8b8;
+$primary-text-color: #565656;
+$red-text-color: #FE7575;
+$green-fill-color: #12E935;
+$blue-text-color: #3FB9FE;
+$box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.83);
+$msg-ribbon-grad: linear-gradient(90deg, rgba(86,86,86,1) 0%, rgba(185,184,184,1) 1%, rgba(202,182,219,1) 5%, rgba(213,181,241,1) 50%, rgba(210,181,235,1) 90%, rgba(185,184,184,1) 99%, rgba(86,86,86,1) 100%);
+
+$text-shadow: 2px 2px 4px rgb(63, 105, 221);
+
+$speed: 15s;
+
+$margins: 150%;
+
+.message-container{
+    background: $msg-ribbon-grad;
+    border-radius: 0.8em;
+    display: grid;
+    place-content: center;
+    border-top: 2px solid $primary-text-color;
+    border-bottom: 2px solid $primary-text-color;
+    overflow: hidden;
+}
+
+.message {
+    -moz-animation: marquee $speed linear infinite;
+    -webkit-animation: marquee $speed linear infinite;
+    animation: marquee $speed linear infinite;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: $text-shadow;
+}
+
+@keyframes marquee {
+    0% {
+        -moz-transform: translateX($margins);
+        -webkit-transform: translateX($margins);
+        transform: translateX($margins)
+    }
+
+    100% {
+        -moz-transform: translateX(-$margins);
+        -webkit-transform: translateX(-$margins);
+        transform: translateX(-$margins);
+    }
+}
