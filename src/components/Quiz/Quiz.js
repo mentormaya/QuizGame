@@ -3,7 +3,7 @@ import "./quiz.scss";
 import Header from "./Header/Header.js";
 import Footer from "./Footer/Footer.js";
 import Groups from "./Groups/Groups.js";
-import Hystory from "./Hystory/Hystory.js";
+import Hystory from "./History/History.js";
 import Question from "./Question/Question.js";
 import Options from "./Options/Options.js";
 import QuestionSelector from "./QuestionSelector/QuestionSelector.js";

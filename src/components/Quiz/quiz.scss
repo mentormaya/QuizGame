@@ -27,10 +27,22 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
         grid-template-columns: minmax(20%,25%) 1fr minmax(20%,25%);
 
         aside{
-            background-color: $q-grey-color;
-            border-top: 2px solid $primary-text-color;
-            border-bottom: 2px solid $primary-text-color;
+            // background-color: $q-grey-color;
+            // border-top: 2px solid $primary-text-color;
+            // border-bottom: 2px solid $primary-text-color;
             border-radius: 0.8em;
+            // box-shadow: $box-shadow;
+            display: grid;
+            grid-template-rows: auto 1fr;
         }
+        
+        .main-container{
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+        }
+        
+        // .left-side-bar{
+            
+        // }
     }
 }
