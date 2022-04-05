@@ -17,4 +17,35 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
     border-radius: 0.8em;
     box-shadow: $box-shadow;
     padding: 0.2em;
+
+    .title{
+        height: 10%;
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-style: italic;
+        padding: 0.4em;
+        margin-bottom: 0.8em;
+        position: sticky;
+
+        // &::before {
+        //     content: '';
+        //     background-color: $red-text-color;
+        //     width: 30%;
+        //     height: 2px;
+        //     display: block;
+        //     position: absolute;
+        //     top: 30%;
+        //     left: 35%;
+        // }
+
+        &::after {
+            content: '';
+            background-color: $red-text-color;
+            width: 95%;
+            height: 2px;
+            display: block;
+            position: absolute;
+            top: 140%;
+        }
+    }
 }

@@ -9,6 +9,7 @@ $red-text-color: #FE7575;
 $green-fill-color: #12E935;
 $blue-text-color: #3FB9FE;
 $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
+$text-shadow: 2px 2px 4px rgb(63, 105, 221);
 
 header.quiz-header{
     background-color: $q-light-grey-color;
@@ -47,6 +48,7 @@ header.quiz-header{
             font-family: 'Lobster';
             line-height: 2.1rem;
             padding: 0.2em;
+            text-shadow: $text-shadow;
         }
     }
     

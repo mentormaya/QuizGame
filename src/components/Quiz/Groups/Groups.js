@@ -7,6 +7,7 @@ import './Groups.scss'
 function Groups() {
   return (
     <div className="groups">
+      <div className="title">Groups</div>
       <Group name='Janaki'/>
       <Group name='Janak Nandini' active={true}/>
       <Group name='Sita'/>

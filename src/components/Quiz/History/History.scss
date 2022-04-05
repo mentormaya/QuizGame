@@ -8,13 +8,48 @@ $primary-text-color: #565656;
 $red-text-color: #FE7575;
 $green-fill-color: #12E935;
 $blue-text-color: #3FB9FE;
-$box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
+$box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.83);
 
-.history{
+.history {
     background-color: $q-grey-color;
+    padding: 0.2em;
     border-top: 2px solid $primary-text-color;
     border-bottom: 2px solid $primary-text-color;
     border-radius: 0.8em;
     box-shadow: $box-shadow;
-    padding: 0.2em;
+    height: 90vh;
+
+    .title {
+        height: 5%;
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-style: italic;
+        padding: 0.4em;
+        position: relative;
+
+        &::after {
+            content: '';
+            background-color: $red-text-color;
+            width: 95%;
+            height: 2px;
+            display: block;
+            position: absolute;
+            top: 95%;
+        }
+    }
+
+    .events {
+        height: 50vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+}
+
+@media (max-width: 1500px) and (orientation: landscape) {
+    .history{
+        height: 80vh;
+        .events {
+            height: 40vh;
+        }
+    }
 }

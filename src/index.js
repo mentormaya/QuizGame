@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './css/index.scss'
+import { createRoot } from 'react-dom/client';
 import Quiz from './components/Quiz/Quiz'
+import './css/index.scss'
+import './css/scrolbar.scss'
 
-ReactDOM.render(
+const container = document.getElementById('root')
+const root = createRoot(container)
+
+root.render(
   <React.StrictMode>
     <Quiz />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
