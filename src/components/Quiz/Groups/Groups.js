@@ -8,6 +8,7 @@ function Groups() {
   return (
     <div className="groups">
       <div className="title">Groups</div>
+      <hr />
       <Group name='Janaki'/>
       <Group name='Janak Nandini' active={true}/>
       <Group name='Sita'/>

@@ -1,0 +1,7 @@
+.q-list{
+    display: flex;
+    flex-wrap: wrap;
+    ul > li{
+        flex-basis: 0.8em;
+    }
+}

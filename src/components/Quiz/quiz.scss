@@ -48,13 +48,19 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
             }
         }
         
-        .main-container{
+        .main-container {
             display: grid;
-            grid-template-rows: 2fr 1fr;
+            grid-template-rows: 1fr minmax(5rem, 8rem);
+
+            section {
+                display: grid;
+            }
         }
         
-        // .left-side-bar{
+        .right-side-bar{
+            display: grid;
+            grid-template-rows: auto 1fr;
             
-        // }
+        }
     }
 }

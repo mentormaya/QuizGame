@@ -8,6 +8,7 @@ function History() {
   return (
     <div className="history">
       <div className="title">History</div>
+      <hr />
       <div className="events">
         <Event message={"This is the random message1"} timestamp={datetime} />
         <Event message={"This is the random message2"} timestamp={datetime} />

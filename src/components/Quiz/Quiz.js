@@ -46,6 +46,8 @@ function Quiz() {
       "correct_option": "d"
     }
 
+    let questionCount = 50;
+
   return (
     <div className="quiz-container">
       <Header title={title} message={message} />
@@ -63,7 +65,7 @@ function Quiz() {
           </section>
         </main>
         <aside className="right-side-bar">
-          <QuestionSelector />
+          <QuestionSelector count={questionCount}/>
           <h1>Timer and Controls</h1>
         </aside>
       </div>

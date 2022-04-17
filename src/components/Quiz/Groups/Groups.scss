@@ -38,14 +38,14 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
         //     left: 35%;
         // }
 
-        &::after {
-            content: '';
-            background-color: $red-text-color;
-            width: 95%;
-            height: 2px;
-            display: block;
-            position: absolute;
-            top: 140%;
-        }
+        // &::after {
+        //     content: '';
+        //     background-color: $red-text-color;
+        //     width: 95%;
+        //     height: 2px;
+        //     display: block;
+        //     position: absolute;
+        //     top: 140%;
+        // }
     }
 }
