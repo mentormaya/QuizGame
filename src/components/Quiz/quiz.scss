@@ -30,16 +30,20 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
         overflow: hidden;
 
         aside{
-            // background-color: $q-grey-color;
-            // border-top: 2px solid $primary-text-color;
-            // border-bottom: 2px solid $primary-text-color;
+            background-color: $q-grey-color;
+            border-top: 2px solid $primary-text-color;
+            border-bottom: 2px solid $primary-text-color;
             border-radius: 0.8em;
-            // box-shadow: $box-shadow;
+            box-shadow: $box-shadow;
             display: grid;
             grid-template-rows: auto 1fr;
             height: 80vh;
             overflow: hidden;
             box-shadow: $box-shadow;
+            hr {
+                display: block;
+                width: 100%;
+            }
         }
 
         @media (max-width: 1500px) and (orientation: landscape) {
@@ -59,7 +63,7 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
         
         .right-side-bar{
             display: grid;
-            grid-template-rows: auto 1fr;
+            grid-template-rows: auto auto 1fr;
             
         }
     }

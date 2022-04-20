@@ -12,9 +12,11 @@ const generateList = (total) => {
 
 function QList({total}) {
   return (
-    <ul className='q-list'>
+    <div className='q-list'>
+      <ul>
         {generateList(total)}
     </ul>
+    </div>
   )
 }
 

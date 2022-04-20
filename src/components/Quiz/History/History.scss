@@ -11,12 +11,7 @@ $blue-text-color: #3FB9FE;
 $box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.83);
 
 .history {
-    background-color: $q-grey-color;
     padding: 0.2em;
-    border-top: 2px solid $primary-text-color;
-    border-bottom: 2px solid $primary-text-color;
-    border-radius: 0.8em;
-    box-shadow: $box-shadow;
     height: 90vh;
 
     .title {
@@ -26,16 +21,6 @@ $box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.83);
         font-style: italic;
         padding: 0.4em;
         position: relative;
-
-        // &::after {
-        //     content: '';
-        //     background-color: $red-text-color;
-        //     width: 95%;
-        //     height: 2px;
-        //     display: block;
-        //     position: absolute;
-        //     top: 95%;
-        // }
     }
 
     .events {

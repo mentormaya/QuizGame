@@ -7,6 +7,7 @@ import Hystory from "./History/History.js";
 import Question from "./Question/Question.js";
 import Options from "./Options/Options.js";
 import QuestionSelector from "./QuestionSelector/QuestionSelector.js";
+import TimerControl from "./TimerControls/TimerControl";
 
 function Quiz() {
   let date = new Date();
@@ -54,6 +55,7 @@ function Quiz() {
       <div className="quiz-body">
         <aside className="left-side-bar">
           <Groups />
+          <hr />
           <Hystory />
         </aside>
         <main className="main-container">
@@ -66,7 +68,8 @@ function Quiz() {
         </main>
         <aside className="right-side-bar">
           <QuestionSelector count={questionCount}/>
-          <h1>Timer and Controls</h1>
+          <hr />
+          <TimerControl />
         </aside>
       </div>
       <Footer year={year} />
