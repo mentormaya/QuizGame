@@ -5,7 +5,7 @@ import './QuestionSelector.scss'
 function QuestionSelector({count}) {
   return (
     <div className='question-selector'>
-      <h2>Question Selector : {count}</h2>
+      <h2>Question Selector : <span className='badge badge-success'>{count}</span></h2>
       <hr />
       <QList total={count}/>
     </div>
