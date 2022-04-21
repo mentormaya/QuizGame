@@ -1,39 +1,154 @@
 {
-  "questions": [
-    {
+  "settings": {
+    "TITLE": "नेपाल राष्ट्र बैंक जनकपुर कार्यालय",
+    "MESSAGE": "नेपाल राष्ट्र बैंककाे ६७औं जयन्तिकाे सुअवसरमा आयाेजित हाजिरी जवाफ प्रतियाेगिता ।",
+    "APP_NAME": "Quiz Application",
+    "VERSION": "0.1.0",
+    "AUTHOR": "AJAY SINGH",
+    "DESCRIPTION": "THIS APPLICATION IS SPECIALLY BUILT FOR THE AUSPICIOUS OCCASION OF ANNIVERSARY PROGRAM FOR NEPAL RASTRA BANK JANAKPUR OFFICE."
+  },
+  "users": [{
+    "username": "ajay",
+    "secret": "loveMe",
+    "full_name": "Ajay Singh"
+  }],
+  "questions": [{
       "id": 1,
       "question": "What is the height of Mount Everest?",
-      "type": "MCQ_TEXT",
+      "type": "MCQ_TEXT_PHOTO",
       "extra": {
         "type": "PHOTO",
         "resource": "assets/Questions/Everest.png"
       },
-      "options": [
-        {
-          "a": 2348
-        },
-        {
-          "b": 3948
-        },
-        {
-          "c": 1548
-        },
-        {
-          "d": 8848
-        }
-      ],
-      "correct_option": "d"
-    }
-  ],
-  "users": [
+      "options": {
+        "a": 2348,
+        "b": 3948,
+        "c": 1548,
+        "d": 8848
+      },
+      "correct_option": "d",
+      "published": false
+    },
     {
-      "username": "ajay",
-      "secret": "loveMe",
-      "full_name": "Ajay Kumar Singh"
+      "id": 2,
+      "question": "What is your name?",
+      "type": "MCQ_TEXT",
+      "options": {
+        "a": "Some One",
+        "b": "No One",
+        "c": "Few One",
+        "d": "Good One"
+      },
+      "correct_option": "a",
+      "published": false
+    },
+    {
+      "id": 3,
+      "question": "Where are you from?",
+      "type": "MCQ_TEXT",
+      "options": {
+        "a": "Nepal",
+        "b": "India",
+        "c": "China",
+        "d": "Bangladesh"
+      },
+      "correct_option": "a",
+      "published": false
+    },
+    {
+      "id": 4,
+      "question": "Where are you from?",
+      "type": "MCQ_TEXT",
+      "options": {
+        "a": "Nepal",
+        "b": "India",
+        "c": "China",
+        "d": "Bangladesh"
+      },
+      "correct_option": "a",
+      "published": false
+    },
+    {
+      "id": 5,
+      "question": "Where are you from?",
+      "type": "MCQ_TEXT_PHOTO",
+      "extra": {
+        "type": "PHOTO",
+        "resource": "assets/Questions/Everest.png"
+      },
+      "options": {
+        "a": "Nepal",
+        "b": "India",
+        "c": "China",
+        "d": "Bangladesh"
+      },
+      "correct_option": "a",
+      "published": false
+    },
+    {
+      "id": 6,
+      "question": "Where are you from?",
+      "type": "MCQ_TEXT",
+      "options": {
+        "a": "Nepal",
+        "b": "India",
+        "c": "China",
+        "d": "Bangladesh"
+      },
+      "correct_option": "a",
+      "published": false
+    },
+    {
+      "id": 7,
+      "question": "Where are you from?",
+      "type": "MCQ_TEXT",
+      "options": {
+        "a": "Nepal",
+        "b": "India",
+        "c": "China",
+        "d": "Bangladesh"
+      },
+      "correct_option": "a",
+      "published": false
+    },
+    {
+      "id": 8,
+      "question": "Where are you from?",
+      "type": "MCQ_TEXT",
+      "options": {
+        "a": "Nepal",
+        "b": "India",
+        "c": "China",
+        "d": "Bangladesh"
+      },
+      "correct_option": "a",
+      "published": false
+    },
+    {
+      "id": 9,
+      "question": "Where are you from?",
+      "type": "MCQ_TEXT",
+      "options": {
+        "a": "Nepal",
+        "b": "India",
+        "c": "China",
+        "d": "Bangladesh"
+      },
+      "correct_option": "a",
+      "published": false
+    },
+    {
+      "id": 10,
+      "question": "Where are you from?",
+      "type": "MCQ_TEXT",
+      "options": {
+        "a": "Nepal",
+        "b": "India",
+        "c": "China",
+        "d": "Bangladesh"
+      },
+      "correct_option": "a",
+      "published": false
     }
-  ],
-  "settings": {
-    "APP_NAME": "Quiz Application",
-    "VERSION": "0.1.0"
-  }
+  ]
 }

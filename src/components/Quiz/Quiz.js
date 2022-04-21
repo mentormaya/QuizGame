@@ -1,5 +1,4 @@
-import React from "react";
-import "./quiz.scss";
+import { useState, useEffect } from "react";
 import Header from "./Header/Header.js";
 import Footer from "./Footer/Footer.js";
 import Groups from "./Groups/Groups.js";
@@ -9,49 +8,82 @@ import Options from "./Options/Options.js";
 import QuestionSelector from "./QuestionSelector/QuestionSelector.js";
 import TimerControl from "./TimerControls/TimerControl";
 
+import "./quiz.scss";
+
 function Quiz() {
   let date = new Date();
   const year = date.getFullYear("YYYY").toString();
 
-  // console.log(year)
+  let ts = date.toString().split(" ")
 
-  //title for the Quiz
+  let timestamp = `${ts[0]}, ${ts[1]} ${ts[2]}, ${ts[3]} ${ts[4]} ${ts[4].split(':')[0] >= 12 ? "PM" : "AM"}`
 
-  const title = "नेपाल राष्ट्र बैंक जनकपुर कार्यालय";
+  const db_url = "http://localhost:5000"
 
-  const message =
-    "नेपाल राष्ट्र बैंककाे ६७औं जयन्तिकाे सुअवसरमा आयाेजित हाजिरी जवाफ प्रतियाेगिता ।";
+  //States for the app
+  const [questions, setQuestions] = useState([]);
 
-    let question = {
-      "id": 1,
-      "question": "What is the height of Mount Everest?",
-      "type": "MCQ_TEXT",
-      "extra": {
-        "type": "PHOTO",
-        "resource": "assets/Questions/Everest.png"
-      },
-      "options": [
-        {
-          "a": 2348
-        },
-        {
-          "b": 3948
-        },
-        {
-          "c": 1548
-        },
-        {
-          "d": 8848
-        }
-      ],
-      "correct_option": "d"
+  useEffect( () => {
+    const getQuestions = async () => {
+      const questionsFromServer = await fetchQuestions()
+      setQuestions(questionsFromServer)
     }
+    getQuestions()
+  }, [])
 
-    let questionCount = 50;
+  const [selectedQuestion, setSelQuestion] = useState({});
 
+  const [settings, setSettings] = useState({})
+
+  const [events, setEvents] = useState([{
+    "msg": "Quiz Application is initialized!",
+    "timestamp": timestamp
+  }])
+
+  useEffect( () => {
+    const getSettings = async () => {
+      const settingsFromServer = await fetchSettings()
+      setSettings(settingsFromServer)
+    }
+    getSettings()
+  }, [])
+
+  //Load the DB
+  const fetchQuestions = async () => {
+    const res = await fetch(`${db_url}/questions`)
+    const data = await res.json()
+    return data
+  }
+
+  const fetchSettings = async () => {
+    const res = await fetch(`${db_url}/settings`)
+    const data = await res.json()
+    return data
+  }
+
+  //Utilities functions
+  const selectQuestion = (num) => {
+    if(questions){
+      setSelQuestion(questions.filter( question => question.id === num )[0])
+      let log = {
+        "msg": `Group # JANAKI selects Question No. ${num}`,
+        "timestamp": timestamp
+      }
+      logger(log)
+    } else {
+      console.log('No Questions to Select')
+    }
+  }
+  const logger = (log) => {
+    setEvents(...events, log)//add new events to the array
+    console.log(events)
+  }
+
+
+  //Main App Container
   return (
     <div className="quiz-container">
-      <Header title={title} message={message} />
+      <Header title={settings.TITLE} message={settings.MESSAGE} />
       <div className="quiz-body">
         <aside className="left-side-bar">
           <Groups />
@@ -60,14 +92,14 @@ function Quiz() {
         </aside>
         <main className="main-container">
           <section className="question-area">
-            <Question question={question}/>
+            <Question question={selectedQuestion}/>
           </section>
           <section className="options-area">
-            <Options options={question.options}/>
+            <Options options={selectedQuestion.options}/>
           </section>
         </main>
         <aside className="right-side-bar">
-          <QuestionSelector count={questionCount}/>
+          <QuestionSelector count={questions.length} selectQuestion = {selectQuestion}/>
           <hr />
           <TimerControl />
         </aside>
