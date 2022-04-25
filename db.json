@@ -12,6 +12,85 @@
     "secret": "loveMe",
     "full_name": "Ajay Singh"
   }],
+  
+  "groups": [{
+    "group_id": "1",
+    "group_name": "प्रदेश नं १",
+    "score": 0,
+    "turn": true,
+    "members": [
+      "Priyanka Thakur",
+      "Ajay Singh",
+      "Some One"
+    ]
+  },
+  {
+    "group_id": "2",
+    "group_name": "मधेस",
+    "score": 0,
+    "turn": false,
+    "members": [
+      "Priyanka Thakur",
+      "Ajay Singh",
+      "Some One"
+    ]
+  },
+  {
+    "group_id": "3",
+    "group_name": "बागमति",
+    "score": 0,
+    "turn": false,
+    "members": [
+      "Priyanka Thakur",
+      "Ajay Singh",
+      "Some One"
+    ]
+  },
+  {
+    "group_id": "4",
+    "group_name": "गण्डकी",
+    "score": 0,
+    "turn": false,
+    "members": [
+      "Priyanka Thakur",
+      "Ajay Singh",
+      "Some One"
+    ]
+  },
+  {
+    "group_id": "5",
+    "group_name": "लुम्बिनी",
+    "score": 0,
+    "turn": false,
+    "members": [
+      "Priyanka Thakur",
+      "Ajay Singh",
+      "Some One"
+    ]
+  },
+  {
+    "group_id": "6",
+    "group_name": "कर्णाली",
+    "score": 0,
+    "turn": false,
+    "members": [
+      "Priyanka Thakur",
+      "Ajay Singh",
+      "Some One"
+    ]
+  },
+  {
+    "group_id": "7",
+    "group_name": "महाकाली",
+    "score": 0,
+    "turn": false,
+    "members": [
+      "Priyanka Thakur",
+      "Ajay Singh",
+      "Some One"
+    ]
+  }
+  ],
   "questions": [{
       "id": 1,
       "question": "What is the height of Mount Everest?",
@@ -113,8 +192,12 @@
     },
     {
       "id": 8,
-      "question": "Where are you from?",
-      "type": "MCQ_TEXT",
+      "question": "Guess the musician?",
+      "type": "MCQ_TEXT_AUDIO",
+      "extra": {
+        "type": "AUDIO",
+        "resource": "assets/Audio/Sayau_thunga.mp3"
+      },
       "options": {
         "a": "Nepal",
         "b": "India",

@@ -13,11 +13,11 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
 
 .event {
     background-color: $q-light-grey-color;
-    padding: 0.4em;
+    padding: 0.2em;
     margin: 0.2em;
     border: $border-color 2px solid;
     border-radius: 0.6em;
-    overflow: hidden;
+    // overflow: hidden;
     display: flex;
     flex-direction: column;
 

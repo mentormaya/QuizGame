@@ -8,8 +8,7 @@ function Question({question}) {
   return (
     <div className="question">
       <TextualQuestion question={question.question}/>
-      
-      {question.extra ? <ExtraContent src={question.extra.resource}/> : ''}
+      {question.extra ? <ExtraContent src={question.extra.resource} type={question.extra.type}/> : ''}
     </div>
   );
 }

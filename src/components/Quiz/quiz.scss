@@ -14,7 +14,7 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
     height: 100vh;
     width: 100vw;
     background-color: $q-background-color;
-    padding: 0.4em;
+    // padding: 0.4em;
     display: grid;
     grid-template-rows: 7em 1fr 3em;
     text-align: center;
@@ -36,8 +36,8 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
             border-radius: 0.8em;
             box-shadow: $box-shadow;
             display: grid;
-            grid-template-rows: auto 1fr;
-            height: 80vh;
+            grid-template-rows: auto auto 1fr;
+            height: 100%;
             overflow: hidden;
             box-shadow: $box-shadow;
             hr {
@@ -48,7 +48,7 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
 
         @media (max-width: 1500px) and (orientation: landscape) {
             aside{
-                height: 75vh;
+                height: 100%;
             }
         }
         
@@ -61,11 +61,11 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
             }
         }
         
-        .right-side-bar{
-            display: grid;
-            grid-template-rows: auto auto 1fr;
+        // .right-side-bar, .left-side-bar{
+        //     display: grid;
+        //     grid-template-rows: auto auto 1fr;
             
-        }
+        // }
     }
 }
 

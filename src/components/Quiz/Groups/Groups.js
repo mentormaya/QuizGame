@@ -4,15 +4,14 @@ import Group from './Group/Group'
 import './Groups.scss'
 
 
-function Groups() {
+function Groups({groups}) {
   return (
     <div className="groups">
       <div className="title">Groups</div>
       <hr />
-      <Group name='Janaki'/>
-      <Group name='Janak Nandini' active={true}/>
-      <Group name='Sita'/>
-      <Group name='Vaidehi'/>
+      { groups.map( group => (
+        <Group name={group.group_name} key={group.group_id} id={group.group_id} score={group.score} active={group.turn}/>
+      ))}
     </div>
   )
 }
