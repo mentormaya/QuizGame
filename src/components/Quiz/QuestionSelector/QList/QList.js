@@ -10,11 +10,14 @@ const generateList = (total, selectQuestion) => {
     return list
 }
 
-function QList({total, selectQuestion}) {
+function QList({questions, selectQuestion}) {
   return (
     <div className='q-list'>
       <ul>
-        {generateList(total, selectQuestion)}
+        {/* {generateList(total, selectQuestion)} */}
+        {questions.map((question) => {
+          return <li key = {question.id} className={question.published ? 'passed' : ''} onClick={() => selectQuestion(question.id)}>{question.id}</li>
+        })}
     </ul>
     </div>
   )

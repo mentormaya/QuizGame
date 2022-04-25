@@ -130,6 +130,13 @@ function Quiz() {
         msg: `${turn.group_name} selects Question No. ${num}`,
         timestamp: timestamp,
       });
+      //mark the question as passed
+      let qs = questions
+      qs[num-1].published = true
+      setQuestions(qs)
+
+      //TODO check to start the timer
+      checkTimer()
     } else {
       logger({
         msg: `No Questions available!`,
@@ -142,6 +149,16 @@ function Quiz() {
     setEvents([...events, log]); //add new events to the array
     // console.log(events)
   };
+
+  const checkTimer = () => {
+    if(selectedQuestion.type === "MCQ_TEXT" || selectedQuestion.type === "MCQ_TEXT_PHOTO"){
+      startTimer("01:00")
+    }
+  }
+
+  const startTimer = (time) => {
+    alert(`Countdown started for ${time}`)
+  }
 
   //Main App Container
   return (
@@ -163,7 +180,7 @@ function Quiz() {
         </main>
         <aside className="right-side-bar">
           <QuestionSelector
-            count={questions.length}
+            questions={questions}
             selectQuestion={selectQuestion}
           />
           <hr />

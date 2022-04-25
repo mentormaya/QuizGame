@@ -1,5 +1,7 @@
 {
   "settings": {
+    "TURN_TIME": "30:00",
+    "PASS_TIME": "15:00",
     "TITLE": "नेपाल राष्ट्र बैंक जनकपुर कार्यालय",
     "MESSAGE": "नेपाल राष्ट्र बैंककाे ६७औं जयन्तिकाे सुअवसरमा आयाेजित हाजिरी जवाफ प्रतियाेगिता ।",
     "APP_NAME": "Quiz Application",
@@ -132,7 +134,7 @@
         "d": "Bangladesh"
       },
       "correct_option": "a",
-      "published": false
+      "published": true
     },
     {
       "id": 4,
@@ -233,5 +235,6 @@
       "correct_option": "a",
       "published": false
     }
-  ]
+  ],
+  "histories":[]
 }

@@ -6,10 +6,10 @@ import './Options.scss'
 function Options({options}) {
   return (
     <div className='options'>
-      <Option option={options ? options.a : 'Option A'} classes={"option-a"}/>
-      <Option option={options ? options.b : 'Option B'} classes={"option-b"}/>
-      <Option option={options ? options.c : 'Option C'} classes={"option-c"}/>
-      <Option option={options ? options.d : 'Option D'} classes={"option-d"}/>
+      <Option option={options ? 'A)  '+ options.a : 'Option A'} classes={"option-a"}/>
+      <Option option={options ? 'B)  '+ options.b : 'Option B'} classes={"option-b"}/>
+      <Option option={options ? 'C)  '+ options.c : 'Option C'} classes={"option-c"}/>
+      <Option option={options ? 'D)  '+ options.d : 'Option D'} classes={"option-d"}/>
     </div>
   )
 }
