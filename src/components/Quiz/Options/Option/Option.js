@@ -1,10 +1,10 @@
 import React from 'react'
 import './Option.scss'
 
-function Option({option, classes}) {
+function Option({option, classes, checkOption, refer}) {
     classes = 'option ' + classes
   return (
-    <div className={classes}>{option}</div>
+    <div ref={refer} className={classes} onClick={checkOption}>{option}</div>
   )
 }
 

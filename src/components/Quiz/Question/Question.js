@@ -4,11 +4,11 @@ import ExtraContent from "./ExtraContent/ExtraContent";
 
 import './Question.scss'
 
-function Question({question}) {
+function Question({question, audio, video}) {
   return (
     <div className="question">
       <TextualQuestion question={question.question}/>
-      {question.extra ? <ExtraContent src={question.extra.resource} type={question.extra.type}/> : ''}
+      {question.extra ? <ExtraContent src={question.extra.resource} type={question.extra.type} audio={audio} video={video}/> : ''}
     </div>
   );
 }

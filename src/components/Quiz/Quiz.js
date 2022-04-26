@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Header from "./Header/Header.js";
 import Footer from "./Footer/Footer.js";
 import Groups from "./Groups/Groups.js";
@@ -7,6 +7,7 @@ import Question from "./Question/Question.js";
 import Options from "./Options/Options.js";
 import QuestionSelector from "./QuestionSelector/QuestionSelector.js";
 import TimerControl from "./TimerControls/TimerControl";
+import { Modal } from "./Modals/AudienceQuiz"
 
 import "./quiz.scss";
 
@@ -23,25 +24,29 @@ function Quiz() {
   const db_url = "http://localhost:5000";
 
   //States for the app
+  const [showAudQuiz, setShowAudQuiz] = useState(false)
+  const [lastID, setLastID] = useState(0);
+  const [timerRunning, setTimerRunning] = useState(false)
+  const [seconds, setSeconds] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [groups, setGroups] = useState([]);
   const [settings, setSettings] = useState({});
   const [selectedQuestion, setSelQuestion] = useState({
-    "id": 0,
-    "question": "राष्ट्र गान, राष्ट्रिय सम्मान",
-    "type": "MCQ_TEXT_AUDIO",
-    "extra": {
-      "type": "AUDIO",
-      "resource": "assets/Audio/Sayau_thunga.mp3"
+    id: 0,
+    question: "राष्ट्र गान, राष्ट्रिय सम्मान",
+    type: "MCQ_TEXT_AUDIO",
+    extra: {
+      type: "AUDIO",
+      resource: "assets/Audio/Sayau_thunga.mp3",
     },
-    "options": {
-      "a": "Nepal",
-      "b": "India",
-      "c": "China",
-      "d": "Bangladesh"
+    options: {
+      a: "Nepal",
+      b: "India",
+      c: "China",
+      d: "Bangladesh",
     },
-    "correct_option": "a",
-    "published": true
+    correct_option: "a",
+    published: true,
   });
   const [events, setEvents] = useState([
     {
@@ -49,7 +54,36 @@ function Quiz() {
       timestamp: timestamp,
     },
   ]);
-  const [turn, setTurn] = useState({})
+  const [turn, setTurn] = useState({});
+
+  //timer countdown code
+  let timer = null;
+
+  const stopTimer = () => {
+    setSeconds(0);
+    setTimerRunning(false)
+    clearInterval(timer);
+  };
+
+  const startTimer = () => {
+    setTimerRunning(true)
+    timer = seconds > 0 && setTimeout(() => setSeconds(seconds - 1), 1000);
+    return () => clearInterval(timer);
+  };
+
+  React.useEffect(() => {
+    startTimer();
+  }, [seconds]);
+
+  // startTimer()
+
+  const audioPlayer = useRef();
+  const videoPlayer = useRef();
+
+  const optionA = useRef();
+  const optionB = useRef();
+  const optionC = useRef();
+  const optionD = useRef();
 
   //Loading Questions
   useEffect(() => {
@@ -69,7 +103,7 @@ function Quiz() {
     const getGroups = async () => {
       const groupsFromServer = await fetchGroups();
       setGroups(groupsFromServer);
-      setTurn(groups.filter((group) => group.turn === true)[0])
+      setTurn(groups.filter((group) => group.turn === true)[0]);
     };
     getGroups();
     logger({
@@ -90,6 +124,14 @@ function Quiz() {
       timestamp: timestamp,
     });
   }, []);
+
+  useEffect(() => {
+    // console.log(timer, seconds)
+    if(timerRunning && seconds <= 0){
+      console.log('timeup')
+      shiftTurn(false)
+    }
+  }, [seconds, timer])
 
   //Load the DB
   const fetchQuestions = async () => {
@@ -122,21 +164,37 @@ function Quiz() {
     return data;
   };
 
+  const resetOptions = () => {
+    optionA.current.classList.remove('option-correct')
+    optionB.current.classList.remove('option-correct')
+    optionC.current.classList.remove('option-correct')
+    optionD.current.classList.remove('option-correct')
+    optionA.current.classList.remove('option-wrong')
+    optionB.current.classList.remove('option-wrong')
+    optionC.current.classList.remove('option-wrong')
+    optionD.current.classList.remove('option-wrong')
+  }
+
   //Utilities functions
-  const selectQuestion = (num) => {
+  const selectQuestion = async (num) => {
+    resetOptions()
     if (questions) {
-      setSelQuestion(questions.filter((question) => question.id === num)[0]);
+      await setSelQuestion(
+        questions.filter((question) => question.id === num)[0]
+      );
+
       logger({
         msg: `${turn.group_name} selects Question No. ${num}`,
         timestamp: timestamp,
       });
+
       //mark the question as passed
-      let qs = questions
-      qs[num-1].published = true
-      setQuestions(qs)
+      let qs = questions;
+      qs[num - 1].published = true;
+      await setQuestions(qs);
 
       //TODO check to start the timer
-      checkTimer()
+      checkTimer(num);
     } else {
       logger({
         msg: `No Questions available!`,
@@ -150,20 +208,136 @@ function Quiz() {
     // console.log(events)
   };
 
-  const checkTimer = () => {
-    if(selectedQuestion.type === "MCQ_TEXT" || selectedQuestion.type === "MCQ_TEXT_PHOTO"){
-      startTimer("01:00")
+  const checkTimer = (num) => {
+    if (
+      questions[num - 1].type === "MCQ_TEXT" ||
+      questions[num - 1].type === "MCQ_TEXT_PHOTO"
+    ) {
+      setSeconds(60);
+      startTimer();
+    }
+  };
+
+  const play = () => {
+    let duration = 60;
+    if (audioPlayer.current) {
+      duration = duration + audioPlayer.current.duration;
+      duration = Math.floor(duration);
+      audioPlayer.current.play();
+    }
+    console.log(`Playing Media for ${duration} seconds`);
+    setSeconds(duration);
+    startTimer();
+  };
+
+  const cancelAction = () => {
+    stopTimer();
+    audioPlayer.current && audioPlayer.current.pause();
+    videoPlayer.current && videoPlayer.current.pause();
+  };
+
+  const audienceQuestion = () => {
+    console.log("Audience Question Time");
+    setShowAudQuiz(true);
+  };
+
+  const checkAnswer = (e) => {
+    stopTimer();
+    let optionHoler = e.target
+    let option = optionHoler.innerHTML;
+    logger({
+      msg: `${turn.group_name} answered ${option === selectedQuestion.correct_option ? "correct" : "incorrect"} Option ${option}`,
+      timestamp: timestamp,
+    });
+    option = option.split(")")[0].toLowerCase();
+    
+    if (option === selectedQuestion.correct_option) {
+      rightAnswer();
+      revealAnswer(true, optionHoler)
+    } else {
+      wrongAnswer();
+      revealAnswer(false, optionHoler)
+    }
+  };
+
+  const shiftTurn = (ans) => {
+    let grps = groups
+    let nxtGrp = 0
+    grps[turn.group_id-1].turn = false
+    if(lastID === 0 && ans){
+      //case for original team answers the question correctly
+      nxtGrp = parseInt(turn.group_id) >= grps.length ? 1 : parseInt(turn.group_id) + 1
+      grps[turn.group_id-1].score += 10
+      console.log('original team answers correctly for 10 marks')
+    } else if (lastID === 0 && !ans){
+      //case for original ask fails
+      setLastID(turn.group_id)
+      setSeconds(15)
+      startTimer()
+      nxtGrp = parseInt(turn.group_id) >= grps.length ? 1 : parseInt(turn.group_id) + 1
+      console.log("original team can't answers correctly for 10 marks")
+    } else if(lastID !== 0 && ans){
+      //case for bonus question answered
+      nxtGrp = lastID >= grps.length ? 1 : parseInt(lastID) + 1
+      grps[turn.group_id-1].score += 5
+      console.log(`${grps[turn.group_id-1].group_name} answered bonus question`)
+      setLastID(0) //clearing bonus
+    } else {
+      nxtGrp = lastID >= grps.length ? 1 : parseInt(lastID) + 1
+      setLastID(0) //clearing bonus
+      console.log('no one can answer the question')
+    }
+    console.log(nxtGrp)
+    grps[nxtGrp-1].turn = true
+    setGroups(grps)
+    setTurn(groups.filter((group) => group.turn === true)[0]);
+  }
+
+  const revealAnswer = (ans, option) => {
+    if(ans){
+      option.classList.add('option-correct')
+    } else if(lastID !== 0){
+      option.classList.add('option-wrong')
+      showCorrectAnswer(selectedQuestion.correct_option)
+    } else {
+      option.classList.add('option-wrong')
+    }
+    console.log(`answered correctly : ${ans}`)
+  }
+
+  const showCorrectAnswer = (ans) => {
+    console.log(`Showing correct answer ${ans.toUpperCase()} automatically`)
+    if(selectedQuestion.correct_option === 'a'){
+      //highlight option A
+      // console.log(optionA.current)
+      optionA.current.classList.add('option-correct')
+    } else if (selectedQuestion.correct_option === 'b'){
+      //highlight option B
+      optionB.current.classList.add('option-correct')
+    } else if (selectedQuestion.correct_option === 'c'){
+      //highlight option C
+      optionC.current.classList.add('option-correct')
+    } else if (selectedQuestion.correct_option === 'd'){
+      //highlight option D
+     optionD.current.classList.add('option-correct')
     }
   }
 
-  const startTimer = (time) => {
-    alert(`Countdown started for ${time}`)
-  }
+  const rightAnswer = () => {
+    console.log("right");
+    shiftTurn(true)
+  };
+
+  const wrongAnswer = () => {
+    console.log("wrong");
+    shiftTurn(false)
+  };
 
   //Main App Container
   return (
     <div className="quiz-container">
       <Header title={settings.TITLE} message={settings.MESSAGE} />
+      {showAudQuiz ? <Modal setShowAudQuiz={setShowAudQuiz} /> : null}
       <div className="quiz-body">
         <aside className="left-side-bar">
           <Groups groups={groups} />
@@ -172,10 +346,21 @@ function Quiz() {
         </aside>
         <main className="main-container">
           <section className="question-area">
-            <Question question={selectedQuestion} />
+            <Question
+              question={selectedQuestion}
+              audio={audioPlayer}
+              video={videoPlayer}
+            />
           </section>
           <section className="options-area">
-            <Options options={selectedQuestion.options} />
+            <Options
+              options={selectedQuestion.options}
+              checkOption={checkAnswer}
+              optionA={optionA}
+              optionB={optionB}
+              optionC={optionC}
+              optionD={optionD}
+            />
           </section>
         </main>
         <aside className="right-side-bar">
@@ -184,7 +369,12 @@ function Quiz() {
             selectQuestion={selectQuestion}
           />
           <hr />
-          <TimerControl />
+          <TimerControl
+            playBtnClick={play}
+            audienceTime={audienceQuestion}
+            seconds={seconds}
+            cancelClick={cancelAction}
+          />
         </aside>
       </div>
       <Footer year={year} />
