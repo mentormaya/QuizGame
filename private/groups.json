@@ -1,0 +1,90 @@
+[
+    {
+        "group_id": "1",
+        "group_name": "मकालु",
+        "score": 0,
+        "turn": true,
+        "members": [
+            "Priyanka Thakur",
+            "Ajay Singh",
+            "Some One"
+        ]
+    },
+    {
+        "group_id": "2",
+        "group_name": "सगरमाथा",
+        "score": 0,
+        "turn": false,
+        "members": [
+            "Priyanka Thakur",
+            "Ajay Singh",
+            "Some One"
+        ]
+    },
+    {
+        "group_id": "3",
+        "group_name": "धाैलागिरी",
+        "score": 0,
+        "turn": false,
+        "members": [
+            "Priyanka Thakur",
+            "Ajay Singh",
+            "Some One"
+        ]
+    },
+    {
+        "group_id": "4",
+        "group_name": "अन्नपूर्ण",
+        "score": 0,
+        "turn": false,
+        "members": [
+            "Priyanka Thakur",
+            "Ajay Singh",
+            "Some One"
+        ]
+    },
+    {
+        "group_id": "5",
+        "group_name": "गणेश",
+        "score": 0,
+        "turn": false,
+        "members": [
+            "Priyanka Thakur",
+            "Ajay Singh",
+            "Some One"
+        ]
+    },
+    {
+        "group_id": "6",
+        "group_name": "कन्चनजङ्घा",
+        "score": 0,
+        "turn": false,
+        "members": [
+            "Priyanka Thakur",
+            "Ajay Singh",
+            "Some One"
+        ]
+    },
+    {
+        "group_id": "7",
+        "group_name": "बरूण",
+        "score": 0,
+        "turn": false,
+        "members": [
+            "Priyanka Thakur",
+            "Ajay Singh",
+            "Some One"
+        ]
+    },
+    {
+        "group_id": "8",
+        "group_name": "नीलगिरी",
+        "score": 0,
+        "turn": false,
+        "members": [
+            "Priyanka Thakur",
+            "Ajay Singh",
+            "Some One"
+        ]
+    }
+]

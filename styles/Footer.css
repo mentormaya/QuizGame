@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+footer {
+  padding: 0 1em;
+  background-color: #b9b8b8;
+}
+footer .quiz-footer {
+  background-color: #DDDDDD;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.83);
+  border-top: 2px solid #565656;
+  border-bottom: 2px solid #565656;
+  border-radius: 0.8em;
+  display: grid;
+  place-content: center;
+}
+footer .quiz-footer a {
+  text-decoration: none;
+  font-style: italic;
+  color: #565656;
+}
+footer .quiz-footer .copyright {
+  padding: 0.4em 0 0.1em 0;
+}
+footer .quiz-footer .rights-info {
+  padding: 0.1em 0 0.4em 0;
+  text-decoration: underline;
+}/*# sourceMappingURL=Footer.css.map */
