@@ -4,8 +4,8 @@ This is the Quiz Application developed using React App with portable db.json to 
 
 ## Progress
 
-- [x] Creating a Repo
-- [x] Updating ReadMe File
-- [x] Designing
-- [x] Database/API
-- [x] Backend Code
+- [x] Creating a Branch
+- [ ] Initialize a Next.js App
+- [ ] Migrate design
+- [ ] Database/API
+- [ ] Backend Code
