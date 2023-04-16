@@ -1,0 +1,28 @@
+$q-background-color: #d5b5f1;
+$border-color: #EAEAEA;
+$q-grey-color: #DDDDDD;
+$q-light-grey-color: #b9b8b8;
+$primary-text-color: #565656;
+$red-text-color: #FE7575;
+$green-fill-color: #12E935;
+$blue-text-color: #3FB9FE;
+$box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
+$text-shadow: 2px 2px 4px rgb(82, 81, 81);
+
+.options{
+    background-color: $q-grey-color;
+    box-shadow: $box-shadow;
+    border-top: 2px solid $primary-text-color;
+    border-bottom: 2px solid $primary-text-color;
+    border-radius: 0.8em;
+    margin: 0.3em;
+    padding: 0.4em;
+    display: flex;
+    flex-basis: 40%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    *{
+        flex: 1;
+    }
+}
