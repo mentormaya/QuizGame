@@ -1,31 +1,31 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { PrismaClient } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Group = {
-  group_id: number,
-  group_name: string,
-  score: number,
-  turn: boolean,
-  members: [
-    string,
-    string,
-    string
-  ]
+const prisma = new PrismaClient();
+
+async function getAllGroups(){
+  let groups = await prisma.group.findMany()
+  for (let group of groups){
+    const members = await prisma.member.findMany({
+      where: {
+        groupId: group.id
+      }
+    })
+    group = { ...group, members}
+    groups =  [ ...groups.slice(0, group.id - 1 ), group, ...groups.slice(group.id) ]
+  }
+  await prisma.$disconnect()
+  return groups
 }
 
-export default function handler(
+
+export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Group>
+  res: NextApiResponse
 ) {
-  res.status(200).json({
-    "group_id": 1,
-    "group_name": "मकालु",
-    "score": 0,
-    "turn": true,
-    "members": [
-      "Priyanka Thakur",
-      "Ajay Singh",
-      "Prabin Mahato"
-    ]
-  })
+  if(req.method === 'GET'){
+    const groups = await getAllGroups()
+    res.status(200).json(groups)
+  }
 }
