@@ -1,0 +1,80 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Setting {
+  id String @id @default(cuid())
+  key String @unique
+  value String
+  remarks String?
+}
+
+model User {
+  id String @id @default(cuid())
+  username String @unique
+  password String 
+  full_name String
+}
+
+model Question {
+  id Int     @id @default(autoincrement())
+  body String
+  type String
+  // type QuestionType
+  correct_option String
+  published Boolean
+  shifted Boolean
+  options Options[]
+  extra Extra?
+}
+
+// enum QuestionType {
+//   MCQ_TEXT
+//   MCQ_TEXT_AUDIO
+//   MCQ_TEXT_PHOTO
+// }
+
+model Extra {
+  id  String @id @default(cuid())
+  type String
+  resource String
+  questionId Int @unique
+  question Question @relation(fields: [questionId], references: [id])
+}
+
+model Options {
+  id String @id @default(cuid())
+  question Question @relation(fields: [questionId], references: [id])
+  questionId Int
+  a String
+  b String
+  c String
+  d String
+}
+
+model Group {
+  id Int @id @default(autoincrement())
+  name String
+  score Int @default(0)
+  turn Boolean
+  members Member[]
+}
+
+model Member {
+  id String @id @default(cuid())
+  full_name String
+  isLeader Boolean
+  group Group @relation(fields: [groupId], references: [id])
+  groupId Int
+}
+
+model History {
+  id String @id @default(uuid())
+  message String
+  timestamp DateTime
+}

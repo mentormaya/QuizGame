@@ -5,8 +5,9 @@ This is the Quiz Application developed using React App with portable db.json to 
 ## Progress
 
 - [x] Creating a Branch
-- [ ] Initialize a Next.js App
+- [x] Initialize a Next.js App
 - [ ] Migrate design
+- [x] SQlite DB with prisma
 - [ ] Database/API
 - [ ] Backend Code
 
