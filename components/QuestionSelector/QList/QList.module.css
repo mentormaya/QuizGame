@@ -1,0 +1,22 @@
+.q-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  list-style-type: none;
+}
+.q-list ul li {
+  flex-basis: 10%;
+  margin: 0.1em;
+  padding: 0.2em;
+  background-color: #05a500;
+  color: black;
+  border: 1px solid #EAEAEA;
+  border-radius: 20%;
+  cursor: pointer;
+}
+.q-list ul li:hover {
+  background-color: #DDDDDD;
+}
+.q-list ul .passed {
+  background-color: #FE7575;
+}/*# sourceMappingURL=QList.module.css.map */

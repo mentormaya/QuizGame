@@ -2,21 +2,42 @@
 import { PrismaClient } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from 'next'
 
+import groupsFile from "../../private/groups.json";
+
 const prisma = new PrismaClient();
 
 async function getAllGroups(){
-  let groups = await prisma.group.findMany()
-  for (let group of groups){
-    const members = await prisma.member.findMany({
-      where: {
-        groupId: group.id
-      }
+  let gs = await prisma.group.findMany()
+  const groups = Promise.all(
+    gs.map(async group => {
+      const mems = await prisma.member.findMany({
+        where: {
+          groupId: group.id
+        }
+      })
+      const members = mems.map( member => {
+        const { full_name, isLeader } = member
+        return { full_name, isLeader }
+      })
+      return { ...group, members: members}
     })
-    group = { ...group, members}
-    groups =  [ ...groups.slice(0, group.id - 1 ), group, ...groups.slice(group.id) ]
-  }
-  await prisma.$disconnect()
+  )
+  await prisma.$disconnect() 
   return groups
+}
+
+
+function makeGroups() {
+  return groupsFile.map((group) => {
+      return {
+          name: group.group_name,
+          score: group.score,
+          turn: group.turn,
+          members: {
+              create: group.members,
+          },
+      };
+  });
 }
 
 

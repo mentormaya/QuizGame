@@ -2,6 +2,8 @@
 import { PrismaClient } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from 'next'
 
+import settingsFile from "../../private/settings.json";
+
 const prisma = new PrismaClient();
 
 type Settings = {
@@ -15,11 +17,10 @@ async function getAllSettings(){
   return await prisma.setting.findMany()
 }
 
-
-
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Settings[]>
+  // res: NextApiResponse<Settings[]>
+  res: NextApiResponse
 ) {
   if(req.method === 'GET'){
     const settings = await getAllSettings()

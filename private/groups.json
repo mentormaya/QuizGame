@@ -5,9 +5,18 @@
         "score": 0,
         "turn": true,
         "members": [
-            "Priyanka Thakur",
-            "Ajay Singh",
-            "Some One"
+            {
+                "full_name": "Priyanka Thakur",
+                "isLeader": true
+            },
+            {
+                "full_name": "Ajay Singh",
+                "isLeader": false
+            },
+            {
+                "full_name": "Some One",
+                "isLeader": false
+            }
         ]
     },
     {
@@ -16,9 +25,18 @@
         "score": 0,
         "turn": false,
         "members": [
-            "Priyanka Thakur",
-            "Ajay Singh",
-            "Some One"
+            {
+                "full_name": "Priyanka Thakur",
+                "isLeader": true
+            },
+            {
+                "full_name": "Ajay Singh",
+                "isLeader": false
+            },
+            {
+                "full_name": "Some One",
+                "isLeader": false
+            }
         ]
     },
     {
@@ -27,9 +45,18 @@
         "score": 0,
         "turn": false,
         "members": [
-            "Priyanka Thakur",
-            "Ajay Singh",
-            "Some One"
+            {
+                "full_name": "Priyanka Thakur",
+                "isLeader": true
+            },
+            {
+                "full_name": "Ajay Singh",
+                "isLeader": false
+            },
+            {
+                "full_name": "Some One",
+                "isLeader": false
+            }
         ]
     },
     {
@@ -38,9 +65,18 @@
         "score": 0,
         "turn": false,
         "members": [
-            "Priyanka Thakur",
-            "Ajay Singh",
-            "Some One"
+            {
+                "full_name": "Priyanka Thakur",
+                "isLeader": true
+            },
+            {
+                "full_name": "Ajay Singh",
+                "isLeader": false
+            },
+            {
+                "full_name": "Some One",
+                "isLeader": false
+            }
         ]
     },
     {
@@ -49,9 +85,18 @@
         "score": 0,
         "turn": false,
         "members": [
-            "Priyanka Thakur",
-            "Ajay Singh",
-            "Some One"
+            {
+                "full_name": "Priyanka Thakur",
+                "isLeader": true
+            },
+            {
+                "full_name": "Ajay Singh",
+                "isLeader": false
+            },
+            {
+                "full_name": "Some One",
+                "isLeader": false
+            }
         ]
     },
     {
@@ -60,9 +105,18 @@
         "score": 0,
         "turn": false,
         "members": [
-            "Priyanka Thakur",
-            "Ajay Singh",
-            "Some One"
+            {
+                "full_name": "Priyanka Thakur",
+                "isLeader": true
+            },
+            {
+                "full_name": "Ajay Singh",
+                "isLeader": false
+            },
+            {
+                "full_name": "Some One",
+                "isLeader": false
+            }
         ]
     },
     {
@@ -71,9 +125,18 @@
         "score": 0,
         "turn": false,
         "members": [
-            "Priyanka Thakur",
-            "Ajay Singh",
-            "Some One"
+            {
+                "full_name": "Priyanka Thakur",
+                "isLeader": true
+            },
+            {
+                "full_name": "Ajay Singh",
+                "isLeader": false
+            },
+            {
+                "full_name": "Some One",
+                "isLeader": false
+            }
         ]
     },
     {
@@ -82,9 +145,18 @@
         "score": 0,
         "turn": false,
         "members": [
-            "Priyanka Thakur",
-            "Ajay Singh",
-            "Some One"
+            {
+                "full_name": "Priyanka Thakur",
+                "isLeader": true
+            },
+            {
+                "full_name": "Ajay Singh",
+                "isLeader": false
+            },
+            {
+                "full_name": "Some One",
+                "isLeader": false
+            }
         ]
     }
 ]

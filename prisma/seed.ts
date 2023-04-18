@@ -1,191 +1,48 @@
 import { PrismaClient } from "@prisma/client";
 import type { Prisma } from "@prisma/client";
 
+import settingsFile from "../private/settings.json";
 import questionsFile from "../private/questions.json";
+import usersFile from "../private/users.json";
+import groupsFile from "../private/groups.json";
 
 const prisma = new PrismaClient();
 
-const userData: Prisma.UserCreateInput[] = [
-    {
-        username: "ajay",
-        password: "loveMe",
-        full_name: "Ajay Singh",
-    },
-];
+function makeUsers() {
+    return usersFile.map((user) => {
+        return {
+            username: user.username,
+            password: user.secret,
+            full_name: user.full_name,
+        };
+    });
+}
 
-const groupsData: Prisma.GroupCreateInput[] = [
-    {
-        name: "मकालु",
-        score: 0,
-        turn: true,
-        members: {
-            create: [
-                {
-                    full_name: "Priyanka Thakur",
-                    isLeader: true,
-                },
-                {
-                    full_name: "Ajay Singh",
-                    isLeader: false,
-                },
-                {
-                    full_name: "Prabin Kumar Mahato",
-                    isLeader: false,
-                },
-            ],
-        },
-    },
-    {
-        name: "सगरमाथा",
-        score: 0,
-        turn: false,
-        members: {
-            create: [
-                {
-                    full_name: "Priyanka Thakur",
-                    isLeader: true,
-                },
-                {
-                    full_name: "Ajay Singh",
-                    isLeader: false,
-                },
-                {
-                    full_name: "Prabin Kumar Mahato",
-                    isLeader: false,
-                },
-            ],
-        },
-    },
-    {
-        name: "धाैलागिरी",
-        score: 0,
-        turn: false,
-        members: {
-            create: [
-                {
-                    full_name: "Priyanka Thakur",
-                    isLeader: true,
-                },
-                {
-                    full_name: "Ajay Singh",
-                    isLeader: false,
-                },
-                {
-                    full_name: "Prabin Kumar Mahato",
-                    isLeader: false,
-                },
-            ],
-        },
-    },
-    {
-        name: "अन्नपूर्ण",
-        score: 0,
-        turn: false,
-        members: {
-            create: [
-                {
-                    full_name: "Priyanka Thakur",
-                    isLeader: true,
-                },
-                {
-                    full_name: "Ajay Singh",
-                    isLeader: false,
-                },
-                {
-                    full_name: "Prabin Kumar Mahato",
-                    isLeader: false,
-                },
-            ],
-        },
-    },
-    {
-        name: "गणेश",
-        score: 0,
-        turn: false,
-        members: {
-            create: [
-                {
-                    full_name: "Priyanka Thakur",
-                    isLeader: true,
-                },
-                {
-                    full_name: "Ajay Singh",
-                    isLeader: false,
-                },
-                {
-                    full_name: "Prabin Kumar Mahato",
-                    isLeader: false,
-                },
-            ],
-        },
-    },
-    {
-        name: "कन्चनजङ्घा",
-        score: 0,
-        turn: false,
-        members: {
-            create: [
-                {
-                    full_name: "Priyanka Thakur",
-                    isLeader: true,
-                },
-                {
-                    full_name: "Ajay Singh",
-                    isLeader: false,
-                },
-                {
-                    full_name: "Prabin Kumar Mahato",
-                    isLeader: false,
-                },
-            ],
-        },
-    },
-    {
-        name: "बरूण",
-        score: 0,
-        turn: false,
-        members: {
-            create: [
-                {
-                    full_name: "Priyanka Thakur",
-                    isLeader: true,
-                },
-                {
-                    full_name: "Ajay Singh",
-                    isLeader: false,
-                },
-                {
-                    full_name: "Prabin Kumar Mahato",
-                    isLeader: false,
-                },
-            ],
-        },
-    },
-    {
-        name: "नीलगिरी",
-        score: 0,
-        turn: false,
-        members: {
-            create: [
-                {
-                    full_name: "Priyanka Thakur",
-                    isLeader: true,
-                },
-                {
-                    full_name: "Ajay Singh",
-                    isLeader: false,
-                },
-                {
-                    full_name: "Prabin Kumar Mahato",
-                    isLeader: false,
-                },
-            ],
-        },
-    },
-];
+const userData: Prisma.UserCreateInput[] = makeUsers()
+
+function makeGroups() {
+    return groupsFile.map((group) => {
+        const members = group.members.map(member => {
+            return {
+                full_name: member.full_name,
+                isLeader: member.isLeader
+            }
+        })
+        return {
+            name: group.group_name,
+            score: group.score,
+            turn: group.turn,
+            members: {
+                create: members,
+            },
+        };
+    });
+}
+
+const groupsData: Prisma.GroupCreateInput[] = makeGroups()
 
 function makeQuestions() {
-    const questionData = questionsFile.map((question) => {
+    return questionsFile.map((question) => {
         return {
             body: question.body,
             type: question.type,
@@ -208,10 +65,22 @@ function makeQuestions() {
             },
         };
     });
-    return questionData;
 }
 
-const questionData: Prisma.QuestionCreateInput[] = makeQuestions()
+const questionData: Prisma.QuestionCreateInput[] = makeQuestions();
+
+
+function makeSettings() {
+    let settings = Object.keys(settingsFile).map(setting => {
+        return {
+            key: setting,
+            value: settingsFile[setting as keyof typeof settingsFile]
+        }
+    })
+    return settings
+}
+
+const settingsData: Prisma.SettingCreateInput[] = makeSettings();
 
 async function seedUsers() {
     for (const u of userData) {
@@ -240,8 +109,18 @@ async function seedQuestions() {
     }
 }
 
+async function seedSettings(){
+    for (const s of settingsData) {
+        const setting = await prisma.setting.create({
+            data: s,
+        });
+        console.log(`Created Question: ${setting.key}`);
+    }
+}
+
 async function main() {
     console.log(`Start seeding ...`);
+    await seedSettings();
     await seedUsers();
     await seedGroups();
     await seedQuestions();

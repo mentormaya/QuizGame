@@ -1,0 +1,66 @@
+.option {
+  color: #565656;
+  padding: 0.6em 0.4em;
+  min-width: 40%;
+  background-color: #b9b8b8;
+  border: 2px solid #EAEAEA;
+  margin: 0.4em 0.4em;
+}
+.option:hover {
+  cursor: pointer;
+  background-color: #929191;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.83);
+}
+
+.option-a {
+  border-radius: 0 1.2em;
+  font-weight: bold;
+}
+
+.option-b {
+  border-radius: 1.2em 0;
+  font-weight: bold;
+}
+
+.option-c {
+  border-radius: 1.2em 0;
+  font-weight: bold;
+}
+
+.option-d {
+  border-radius: 0 1.2em;
+  font-weight: bold;
+}
+
+.option-correct {
+  color: #01690a;
+  background: #12E935;
+  animation: blink-correct 1.5s ease-in-out infinite;
+}
+
+.option-wrong {
+  color: #fcbebe;
+  background: #bd5c5c;
+  animation: blink-wrong 1.5s ease-in-out infinite;
+}
+
+@keyframes blink-wrong {
+  0% {
+    background-color: #bd5c5c;
+    color: #fcbebe;
+  }
+  50% {
+    background-color: #b9b8b8;
+    color: #565656;
+  }
+}
+@keyframes blink-correct {
+  0% {
+    background-color: #12E935;
+    color: #01690a;
+  }
+  50% {
+    background-color: #b9b8b8;
+    color: #565656;
+  }
+}/*# sourceMappingURL=Option.module.css.map */

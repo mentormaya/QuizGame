@@ -1,0 +1,21 @@
+.quiz-footer {
+  background-color: #DDDDDD;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.83);
+  border-top: 2px solid #565656;
+  border-bottom: 2px solid #565656;
+  border-radius: 0.8em;
+  display: grid;
+  place-content: center;
+}
+.quiz-footer a {
+  text-decoration: none;
+  font-style: italic;
+  color: #565656;
+}
+.quiz-footer .copyright {
+  padding: 0.4em 0 0.1em 0;
+}
+.quiz-footer .rights-info {
+  padding: 0.1em 0 0.4em 0;
+  text-decoration: underline;
+}/*# sourceMappingURL=Footer.module.css.map */

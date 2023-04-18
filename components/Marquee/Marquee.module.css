@@ -1,0 +1,25 @@
+.message-container {
+  background: linear-gradient(90deg, rgb(86, 86, 86) 0%, rgb(185, 184, 184) 1%, rgb(202, 182, 219) 5%, rgb(213, 181, 241) 50%, rgb(210, 181, 235) 90%, rgb(185, 184, 184) 99%, rgb(86, 86, 86) 100%);
+  border-radius: 0.8em;
+  display: grid;
+  place-content: center;
+  border-top: 2px solid #565656;
+  border-bottom: 2px solid #565656;
+  overflow: hidden;
+}
+
+.message {
+  animation: marquee 15s linear infinite;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgb(63, 105, 221);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}/*# sourceMappingURL=Marquee.module.css.map */
