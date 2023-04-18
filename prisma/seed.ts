@@ -1,6 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import type { Prisma } from "@prisma/client";
 
+import questionsFile from "../private/questions.json";
+
 const prisma = new PrismaClient();
 
 const userData: Prisma.UserCreateInput[] = [
@@ -20,18 +22,18 @@ const groupsData: Prisma.GroupCreateInput[] = [
             create: [
                 {
                     full_name: "Priyanka Thakur",
-                    isLeader: true
+                    isLeader: true,
                 },
                 {
                     full_name: "Ajay Singh",
-                    isLeader: false
+                    isLeader: false,
                 },
                 {
                     full_name: "Prabin Kumar Mahato",
-                    isLeader: false
+                    isLeader: false,
                 },
-            ]
-        }
+            ],
+        },
     },
     {
         name: "सगरमाथा",
@@ -41,18 +43,18 @@ const groupsData: Prisma.GroupCreateInput[] = [
             create: [
                 {
                     full_name: "Priyanka Thakur",
-                    isLeader: true
+                    isLeader: true,
                 },
                 {
                     full_name: "Ajay Singh",
-                    isLeader: false
+                    isLeader: false,
                 },
                 {
                     full_name: "Prabin Kumar Mahato",
-                    isLeader: false
+                    isLeader: false,
                 },
-            ]
-        }
+            ],
+        },
     },
     {
         name: "धाैलागिरी",
@@ -62,18 +64,18 @@ const groupsData: Prisma.GroupCreateInput[] = [
             create: [
                 {
                     full_name: "Priyanka Thakur",
-                    isLeader: true
+                    isLeader: true,
                 },
                 {
                     full_name: "Ajay Singh",
-                    isLeader: false
+                    isLeader: false,
                 },
                 {
                     full_name: "Prabin Kumar Mahato",
-                    isLeader: false
+                    isLeader: false,
                 },
-            ]
-        }
+            ],
+        },
     },
     {
         name: "अन्नपूर्ण",
@@ -83,18 +85,18 @@ const groupsData: Prisma.GroupCreateInput[] = [
             create: [
                 {
                     full_name: "Priyanka Thakur",
-                    isLeader: true
+                    isLeader: true,
                 },
                 {
                     full_name: "Ajay Singh",
-                    isLeader: false
+                    isLeader: false,
                 },
                 {
                     full_name: "Prabin Kumar Mahato",
-                    isLeader: false
+                    isLeader: false,
                 },
-            ]
-        }
+            ],
+        },
     },
     {
         name: "गणेश",
@@ -104,18 +106,18 @@ const groupsData: Prisma.GroupCreateInput[] = [
             create: [
                 {
                     full_name: "Priyanka Thakur",
-                    isLeader: true
+                    isLeader: true,
                 },
                 {
                     full_name: "Ajay Singh",
-                    isLeader: false
+                    isLeader: false,
                 },
                 {
                     full_name: "Prabin Kumar Mahato",
-                    isLeader: false
+                    isLeader: false,
                 },
-            ]
-        }
+            ],
+        },
     },
     {
         name: "कन्चनजङ्घा",
@@ -125,18 +127,18 @@ const groupsData: Prisma.GroupCreateInput[] = [
             create: [
                 {
                     full_name: "Priyanka Thakur",
-                    isLeader: true
+                    isLeader: true,
                 },
                 {
                     full_name: "Ajay Singh",
-                    isLeader: false
+                    isLeader: false,
                 },
                 {
                     full_name: "Prabin Kumar Mahato",
-                    isLeader: false
+                    isLeader: false,
                 },
-            ]
-        }
+            ],
+        },
     },
     {
         name: "बरूण",
@@ -146,18 +148,18 @@ const groupsData: Prisma.GroupCreateInput[] = [
             create: [
                 {
                     full_name: "Priyanka Thakur",
-                    isLeader: true
+                    isLeader: true,
                 },
                 {
                     full_name: "Ajay Singh",
-                    isLeader: false
+                    isLeader: false,
                 },
                 {
                     full_name: "Prabin Kumar Mahato",
-                    isLeader: false
+                    isLeader: false,
                 },
-            ]
-        }
+            ],
+        },
     },
     {
         name: "नीलगिरी",
@@ -167,20 +169,49 @@ const groupsData: Prisma.GroupCreateInput[] = [
             create: [
                 {
                     full_name: "Priyanka Thakur",
-                    isLeader: true
+                    isLeader: true,
                 },
                 {
                     full_name: "Ajay Singh",
-                    isLeader: false
+                    isLeader: false,
                 },
                 {
                     full_name: "Prabin Kumar Mahato",
-                    isLeader: false
+                    isLeader: false,
                 },
-            ]
-        }
-    }
+            ],
+        },
+    },
 ];
+
+function makeQuestions() {
+    const questionData = questionsFile.map((question) => {
+        return {
+            body: question.body,
+            type: question.type,
+            correct_option: question.correct_option,
+            published: question.published,
+            shifted: question.shifted,
+            options: {
+                create: {
+                    a: question.options.a,
+                    b: question.options.b,
+                    c: question.options.c,
+                    d: question.options.d,
+                },
+            },
+            extra: {
+                create: {
+                    type: question.extra ? question.extra.type : "",
+                    resource: question.extra ? question.extra.resource : "",
+                },
+            },
+        };
+    });
+    return questionData;
+}
+
+const questionData: Prisma.QuestionCreateInput[] = makeQuestions()
 
 async function seedUsers() {
     for (const u of userData) {
@@ -200,20 +231,29 @@ async function seedGroups() {
     }
 }
 
+async function seedQuestions() {
+    for (const q of questionData) {
+        const question = await prisma.question.create({
+            data: q,
+        });
+        console.log(`Created Question: ${question.id}`);
+    }
+}
+
 async function main() {
     console.log(`Start seeding ...`);
     await seedUsers();
     await seedGroups();
+    await seedQuestions();
     console.log(`Seeding finished!`);
 }
 
-
 main()
     .then(async () => {
-        await prisma.$disconnect()
+        await prisma.$disconnect();
     })
     .catch(async (e) => {
-        console.error(e)
-        await prisma.$disconnect()
-        process.exit(1)
-    })
+        console.error(e);
+        await prisma.$disconnect();
+        process.exit(1);
+    });

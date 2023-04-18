@@ -50,7 +50,7 @@ model Extra {
 model Options {
   id String @id @default(cuid())
   question Question @relation(fields: [questionId], references: [id])
-  questionId Int
+  questionId Int @unique
   a String
   b String
   c String
