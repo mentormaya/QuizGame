@@ -8,7 +8,7 @@ import Question from './Question/Question';
 import QuestionSelector from './QuestionSelector/QuestionSelector';
 import TimerControl from './TimerControl/TimerControl';
 
-import './Quiz.module.scss'
+import quizStyle from './Quiz.module.scss'
 
 function Quiz() {
   let date = new Date();
@@ -171,14 +171,14 @@ function Quiz() {
   };
 
   const resetOptions = () => {
-    optionA.current.classList.remove('option-correct')
-    optionB.current.classList.remove('option-correct')
-    optionC.current.classList.remove('option-correct')
-    optionD.current.classList.remove('option-correct')
-    optionA.current.classList.remove('option-wrong')
-    optionB.current.classList.remove('option-wrong')
-    optionC.current.classList.remove('option-wrong')
-    optionD.current.classList.remove('option-wrong')
+    optionA.current.classList.remove('optionCorrect')
+    optionB.current.classList.remove('optionCorrect')
+    optionC.current.classList.remove('optionCorrect')
+    optionD.current.classList.remove('optionCorrect')
+    optionA.current.classList.remove('optionWrong')
+    optionB.current.classList.remove('optionWrong')
+    optionC.current.classList.remove('optionWrong')
+    optionD.current.classList.remove('optionWrong')
   }
 
   //Utilities functions
@@ -301,12 +301,12 @@ function Quiz() {
 
   const revealAnswer = (ans, option) => {
     if (ans) {
-      option.classList.add('option-correct')
+      option.classList.add('optionCorrect')
     } else if (lastID !== 0) {
-      option.classList.add('option-wrong')
+      option.classList.add('optionWrong')
       showCorrectAnswer(selectedQuestion.correct_option)
     } else {
-      option.classList.add('option-wrong')
+      option.classList.add('optionWrong')
     }
     console.log(`answered correctly : ${ans}`)
   }
@@ -316,16 +316,16 @@ function Quiz() {
     if (selectedQuestion.correct_option === 'a') {
       //highlight option A
       // console.log(optionA.current)
-      optionA.current.classList.add('option-correct')
+      optionA.current.classList.add('optionCorrect')
     } else if (selectedQuestion.correct_option === 'b') {
       //highlight option B
-      optionB.current.classList.add('option-correct')
+      optionB.current.classList.add('optionCorrect')
     } else if (selectedQuestion.correct_option === 'c') {
       //highlight option C
-      optionC.current.classList.add('option-correct')
+      optionC.current.classList.add('optionCorrect')
     } else if (selectedQuestion.correct_option === 'd') {
       //highlight option D
-      optionD.current.classList.add('option-correct')
+      optionD.current.classList.add('optionCorrect')
     }
   }
 
@@ -342,24 +342,24 @@ function Quiz() {
 
   //Main App Container
   return (
-    <div className="quizContainer">
+    <div className={ quizStyle.quizContainer }>
       <Header title={settings.TITLE} message={settings.MESSAGE} />
       {showAudQuiz ? <Modal setShowAudQuiz={setShowAudQuiz} /> : null}
-      <div className="quiz-body">
-        <aside className="left-side-bar">
+      <div className={ quizStyle.quizBody }>
+        <aside className={ quizStyle.leftSideBar }>
           <Groups groups={groups} />
           <hr />
           <Hystory events={events} />
         </aside>
-        <main className="main-container">
-          <section className="question-area">
+        <main className={ quizStyle.mainContainer }>
+          <section className={quizStyle.questionArea}>
             <Question
               question={selectedQuestion}
               audio={audioPlayer}
               video={videoPlayer}
             />
           </section>
-          <section className="options-area">
+          <section className={ quizStyle.optionsArea }>
             <Options
               options={selectedQuestion.options}
               checkOption={checkAnswer}
@@ -370,7 +370,7 @@ function Quiz() {
             />
           </section>
         </main>
-        <aside className="right-side-bar">
+        <aside className={ quizStyle.rightSideBar }>
           <QuestionSelector
             questions={questions}
             selectQuestion={selectQuestion}

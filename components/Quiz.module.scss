@@ -8,7 +8,7 @@ $green-fill-color: #05a500;
 $blue-text-color: #3FB9FE;
 $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
 
-.quiz-container{
+.quizContainer{
     height: 100vh;
     width: 100vw;
     background-color: $q-background-color;
@@ -19,7 +19,7 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
     color: $primary-text-color;
     overflow: hidden;
 
-    .quiz-body{
+    .quizBody{
         height: 100%;
         background-color: $q-light-grey-color;
         padding: 0.4em 1em;
@@ -50,7 +50,7 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
             }
         }
         
-        .main-container {
+        .mainContainer {
             display: grid;
             grid-template-rows: 1fr minmax(5rem, 8rem);
 
@@ -58,12 +58,6 @@ $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
                 display: grid;
             }
         }
-        
-        // .right-side-bar, .left-side-bar{
-        //     display: grid;
-        //     grid-template-rows: auto auto 1fr;
-            
-        // }
     }
 }
 

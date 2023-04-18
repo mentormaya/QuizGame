@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import Marquee from "components/Marquee/Marquee";
 
-import './Header.module.scss'
+import quizHStyle from './Header.module.scss'
 
 import QuizLogo from 'public/assets/QuizLogo-removebg.png'
 import SettingsIcon from 'public/assets/settings-icon-removebg.png'
@@ -11,15 +11,15 @@ import SettingsIcon from 'public/assets/settings-icon-removebg.png'
 function Header({title, message}) {
   return (
     <>
-      <header className="quiz-header">
-        <div className="brand-logo">
+      <header className={quizHStyle.quizHeader}>
+        <div className={quizHStyle.brandLogo}>
           <Image src={QuizLogo} alt="Quiz Logo"/>
         </div>
-        <div className="banner">
-          <div className="title">{title}</div>
+        <div className={quizHStyle.banner}>
+          <div className={quizHStyle.title}>{title}</div>
           <Marquee message={message} />
         </div>
-        <div className="settings">
+        <div className={quizHStyle.settings}>
           <Image src={SettingsIcon} alt="Quiz Settings" />
         </div>
       </header>

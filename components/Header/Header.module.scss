@@ -9,14 +9,14 @@ $blue-text-color: #3FB9FE;
 $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
 $text-shadow: 2px 2px 4px rgb(63, 105, 221);
 
-header.quiz-header{
+header.quizHeader{
     background-color: $q-light-grey-color;
     height: 7em;
     padding: 1em;
     display: grid;
     gap: 0.1em;
     grid-template-columns: 20% 1fr auto;
-    .brand-logo,
+    .brandLogo,
     .settings{
         display: grid;
         place-content: center;

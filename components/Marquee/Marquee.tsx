@@ -1,11 +1,11 @@
 import React from "react";
-import "./Marquee.module.scss";
+import marqueeStyle from "./Marquee.module.scss";
 
 function Marquee({ message }) {
   return (
     <>
-      <div className="message-container">
-        <p className="message">{message}</p>
+      <div className={marqueeStyle.messageContainer}>
+        <p className={marqueeStyle.message}>{message}</p>
       </div>
     </>
   );
