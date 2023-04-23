@@ -18,38 +18,38 @@ $text-shadow: 2px 2px 4px rgb(82, 81, 81);
     background-color: $q-light-grey-color ;
     border: 2px solid $border-color;
     margin: 0.4em 0.4em;
-
-    &:hover{
-        cursor: pointer;
-        background-color: $q-light-grey-hover ;
-        box-shadow: $box-shadow;
-    }
 }
 
-.option-a{
+.option:hover{
+    cursor: pointer;
+    background-color: $q-light-grey-hover ;
+    box-shadow: $box-shadow;
+}
+
+.optionA{
     border-radius: 0 1.2em;
     font-weight: bold;
 }
-.option-b{
+.optionB{
     border-radius: 1.2em 0;
     font-weight: bold;
 }
-.option-c{
+.optionC{
     border-radius: 1.2em 0;
     font-weight: bold;
 }
-.option-d{
+.optionD{
     border-radius: 0 1.2em;
     font-weight: bold;
 }
 
-.option-correct{
+.optionCorrect{
     color: $text-color;
     background: $green-fill-color;
     animation: blink-correct 1.5s ease-in-out infinite;
 }
 
-.option-wrong{
+.optionWrong{
     color: $red-text-color;
     background: $red-fill-color;
     animation: blink-wrong 1.5s ease-in-out infinite;

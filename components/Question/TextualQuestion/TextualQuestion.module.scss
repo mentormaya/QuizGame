@@ -7,14 +7,13 @@ $red-text-color: #FE7575;
 $green-fill-color: #12E935;
 $blue-text-color: #3FB9FE;
 $box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.83);
+$text-shadow: 2px 2px 4px rgb(70, 98, 189);
 
-.questionSelector{
-    padding: 0.5em;
-    
-    h2{
-        line-height: 1.2;
-        font-size: 1.2rem;
-        font-weight: 600;
-        font-style: italic;
-    }
+.qTextualQuestion{
+    display: flexbox;
+    padding: 0.8em;
+    font-size: 2.2em;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: $text-shadow;
 }

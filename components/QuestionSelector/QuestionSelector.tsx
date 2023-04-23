@@ -1,11 +1,13 @@
 import React from 'react'
 import QList from './QList/QList'
-import './QuestionSelector.module.scss'
+import questionSelectorStyles from './QuestionSelector.module.scss'
+
+import quizStyles from '../Quiz.module.scss'
 
 function QuestionSelector({questions, selectQuestion}) {
   return (
-    <div className='question-selector'>
-      <h2>Question Selector : <span className='badge badge-success'>{questions.length}</span></h2>
+    <div className={questionSelectorStyles.questionSelector}>
+      <h2>Question Selector : <span className={`${quizStyles.badge} ${quizStyles.badgeSuccess}`}>{questions.length}</span></h2>
       <hr />
       <QList questions={questions} selectQuestion={selectQuestion}/>
     </div>

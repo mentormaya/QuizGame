@@ -1,10 +1,9 @@
 import React from 'react'
-import './Option.module.scss'
+import optionStyles from './Option.module.scss'
 
-function Option({option, classes, checkOption, refer}) {
-    classes = 'option ' + classes
+function Option({option, opt, checkOption, refer}) {
   return (
-    <div ref={refer} className={classes} onClick={checkOption}>{option}</div>
+    <div ref={refer} className={`${optionStyles.option} ${opt === 'a' ? optionStyles.optionA : opt === 'b' ? optionStyles.optionB : opt === 'c' ? optionStyles.optionC : optionStyles.optionD}`} onClick={checkOption}>{option}</div>
   )
 }
 

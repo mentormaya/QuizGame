@@ -1,7 +1,7 @@
 import React from "react";
 import marqueeStyle from "./Marquee.module.scss";
 
-function Marquee({ message }) {
+function Marquee({ message } : { message: string }) {
   return (
     <>
       <div className={marqueeStyle.messageContainer}>

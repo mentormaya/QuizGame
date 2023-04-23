@@ -49,4 +49,5 @@ export default async function handler(
     const groups = await getAllGroups()
     res.status(200).json(groups)
   }
+  await prisma.$disconnect() 
 }

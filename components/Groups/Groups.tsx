@@ -1,16 +1,16 @@
 import React from 'react'
 import Group from './Group/Group'
 
-import './Groups.module.scss'
+import groupsStyles from './Groups.module.scss'
 
 
 function Groups({groups}) {
   return (
-    <div className="groups">
-      <div className="title">Groups</div>
+    <div className={groupsStyles.groups}>
+      <div className={groupsStyles.title}>Groups</div>
       <hr />
-      { groups.map( group => (
-        <Group name={group.group_name} key={group.group_id} id={group.group_id} score={group.score} active={group.turn}/>
+      { groups?.map( group => (
+        <Group  key={group.id} name={group.name} id={group.id} score={group.score} active={group.turn}/>
       ))}
     </div>
   )

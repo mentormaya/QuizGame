@@ -1,14 +1,14 @@
 import React from "react";
 import Image from 'next/image'
 
-import Marquee from "components/Marquee/Marquee";
+import Marquee from "../Marquee/Marquee";
 
 import quizHStyle from './Header.module.scss'
 
 import QuizLogo from 'public/assets/QuizLogo-removebg.png'
 import SettingsIcon from 'public/assets/settings-icon-removebg.png'
 
-function Header({title, message}) {
+function Header({title, message} : { title: string, message: string }) {
   return (
     <>
       <header className={quizHStyle.quizHeader}>

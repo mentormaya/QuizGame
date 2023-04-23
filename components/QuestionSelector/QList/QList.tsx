@@ -1,5 +1,5 @@
 import React from 'react'
-import './QList.module.scss'
+import qListStyles from './QList.module.scss'
 
 const generateList = (total, selectQuestion) => {
     let list = [];
@@ -11,11 +11,11 @@ const generateList = (total, selectQuestion) => {
 
 function QList({questions, selectQuestion}) {
   return (
-    <div className='q-list'>
+    <div className={qListStyles.qList}>
       <ul>
         {/* {generateList(total, selectQuestion)} */}
         {questions.map((question) => {
-          return <li key = {question.id} className={question.published ? 'passed' : ''} onClick={() => selectQuestion(question.id)}>{question.id}</li>
+          return <li key = {question.id} className={question.published ? qListStyles.passed : ''} onClick={() => selectQuestion(question.id)}>{question.id}</li>
         })}
     </ul>
     </div>
