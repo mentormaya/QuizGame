@@ -1,5 +1,10 @@
 import React from "react";
-import Event from "./Event/Event";
+import dynamic from "next/dynamic";
+
+const Event = dynamic(
+  () => import("./Event/Event"),
+  { ssr: false }
+)
 
 import historyStyles from "./History.module.scss";
 

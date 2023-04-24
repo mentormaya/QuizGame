@@ -46,16 +46,16 @@ $text-shadow: 2px 2px 4px rgb(82, 81, 81);
 .optionCorrect{
     color: $text-color;
     background: $green-fill-color;
-    animation: blink-correct 1.5s ease-in-out infinite;
+    animation: blinkCorrect 1.5s ease-in-out infinite;
 }
 
 .optionWrong{
     color: $red-text-color;
     background: $red-fill-color;
-    animation: blink-wrong 1.5s ease-in-out infinite;
+    animation: blinkWrong 1.5s ease-in-out infinite;
 }
 
-@keyframes blink-wrong {
+@keyframes blinkWrong {
     0% {
         background-color: $red-fill-color;
         color: $red-text-color;
@@ -66,7 +66,7 @@ $text-shadow: 2px 2px 4px rgb(82, 81, 81);
     }
 }
 
-@keyframes blink-correct {
+@keyframes blinkCorrect {
     0% {
         background-color: $green-fill-color;
         color: $text-color;
