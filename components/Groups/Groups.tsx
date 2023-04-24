@@ -6,7 +6,7 @@ import groupsStyles from './Groups.module.scss'
 
 function Groups({groups}) {
   return (
-    <div className={groupsStyles.groups}>
+    <div className={groupsStyles.groups} key={"groups"}>
       <div className={groupsStyles.title}>Groups</div>
       <hr />
       { groups?.map( group => (

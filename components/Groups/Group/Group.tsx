@@ -12,5 +12,4 @@ function Group({ name = "Group", score = 0, active = false, id = '' }) {
         </div>
     )
 }
-
 export default Group
