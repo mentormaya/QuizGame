@@ -1,7 +1,7 @@
 [
     {
         "group_id": "1",
-        "group_name": "मकालु",
+        "group_name": "Group A",
         "score": 0,
         "turn": true,
         "members": [
@@ -21,7 +21,7 @@
     },
     {
         "group_id": "2",
-        "group_name": "सगरमाथा",
+        "group_name": "Group B",
         "score": 0,
         "turn": false,
         "members": [
@@ -41,7 +41,7 @@
     },
     {
         "group_id": "3",
-        "group_name": "धाैलागिरी",
+        "group_name": "Group C",
         "score": 0,
         "turn": false,
         "members": [
@@ -61,7 +61,7 @@
     },
     {
         "group_id": "4",
-        "group_name": "अन्नपूर्ण",
+        "group_name": "Group D",
         "score": 0,
         "turn": false,
         "members": [
@@ -81,7 +81,7 @@
     },
     {
         "group_id": "5",
-        "group_name": "गणेश",
+        "group_name": "Group E",
         "score": 0,
         "turn": false,
         "members": [
@@ -101,47 +101,7 @@
     },
     {
         "group_id": "6",
-        "group_name": "कन्चनजङ्घा",
-        "score": 0,
-        "turn": false,
-        "members": [
-            {
-                "full_name": "Priyanka Thakur",
-                "isLeader": true
-            },
-            {
-                "full_name": "Ajay Singh",
-                "isLeader": false
-            },
-            {
-                "full_name": "Some One",
-                "isLeader": false
-            }
-        ]
-    },
-    {
-        "group_id": "7",
-        "group_name": "बरूण",
-        "score": 0,
-        "turn": false,
-        "members": [
-            {
-                "full_name": "Priyanka Thakur",
-                "isLeader": true
-            },
-            {
-                "full_name": "Ajay Singh",
-                "isLeader": false
-            },
-            {
-                "full_name": "Some One",
-                "isLeader": false
-            }
-        ]
-    },
-    {
-        "group_id": "8",
-        "group_name": "नीलगिरी",
+        "group_name": "Group F",
         "score": 0,
         "turn": false,
         "members": [

@@ -37,3 +37,7 @@ next-env.d.ts
 #prisma and database
 .env
 prisma/quiz.db
+
+
+#ignore video upload
+public/assets/Questions/*.mp4

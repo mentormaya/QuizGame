@@ -1,767 +1,983 @@
 [
     {
-        "id": 1,
-        "body": "अन्तर्राष्ट्रिय बैंकिङ्ग कारोबारमा प्रचलित LIBOR को पुरा रुप के हुन्छ ? ",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "London Inter-bank Offered Rate",
-            "b": "London Inter-bank interest rate",
-            "c": "London Inter-bank Open Rate",
-            "d": "London Inter-bank Option Rate"
+        "id": "1",
+        "body": "अमेरिकामा यहि सन २०२३ मार्च १० र १२ गते २वटा बैंकहरु Collapse भएका थिए । ती बैंकहरुको नाम भन्नुहोस ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "(1) Silicon Valley Bank & (2) Signature Bank",
         "published": false,
         "shifted": false
     },
     {
-        "id": 2,
-        "body": "NEPSE को स्थापना कहिले भएको हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "२५ पुष २०५०",
-            "b": "२९ पुष २०५०",
-            "c": "२३ पुष २०५०",
-            "d": "३० पुष २०५०"
+        "id": "2",
+        "body": "मैथिली कोकिल भनेर कसलाइ चिनिन्छ ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "विधापति  (मिथिला महाकवि)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 3,
-        "body": "बैंकहरुले ब्याजदर निर्धारणका लागि गणना गर्ने आधार दरमा के के प्रयोग गरिन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "कोष लागत % + CRR लागत % + SLR लागत % + सञ्चालन लागत %",
-            "b": "कोष लागत % + CRR लागत % + SLR लागत % + प्रिमियम %",
-            "c": "कोष लागत % + CRR लागत % + प्रिमियम % + सञ्चालन लागत %",
-            "d": "प्रिमियम % + CRR लागत % + SLR लागत % + सञ्चालन लागत %"
+        "id": "3",
+        "body": "श्रीलंकामा रहेको विश्व सम्पदामा सूचिकृत राजा कश्यपको दरबार रहेको स्थानको नाम के हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "सिगिरीया (Sigiriya) (रावणको दरबारले पनि चिनिन्छ)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 4,
-        "body": "पश्चिम नेपालमा लिवाङ्ग, थवाङ्ग जस्ता “वाङ्ग” शब्द जोडिएका धेरै ठाउहरु छन् । अब भन्नुस “वाङ्ग” शब्दको अर्थ के हुन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "उकालो",
-            "b": "मैदान",
-            "c": "भिरालो",
-            "d": "घमाईलो"
+        "id": "4",
+        "body": "नेपाल राष्ट्र बैंकका प्रथम गभर्नर स्वर्गीय हिमालय शमसेर ज.ब.रा. को स्वर्गारोहण कुन मितिमा  भएको थियो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "२२ माघ २०७९  ( ५ फेब्रुअरी २०२३०)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 5,
-        "body": "वित्तीय विवरण तयार गर्न प्रयोगमा आएको IFRS (जसलाई NFRS को रुपमा नेपालमा प्रयोग गरिन्छ) को विकास गर्ने संस्था कुन हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "NASB",
-            "b": "IASB",
-            "c": "IFRIC",
-            "d": "IBRD"
+        "id": "5",
+        "body": "सबैभन्दा चाँडो बढ्ने वनस्पती कुन हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "बाँस",
         "published": false,
         "shifted": false
     },
     {
-        "id": 6,
-        "body": "IFRS को व्याख्या तथा गुणस्तर सुधार गर्न सल्ला र सहायोग गर्ने संस्था कुन हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "IASB",
-            "b": "IFRIC",
-            "c": "IFIC",
-            "d": "IMF"
+        "id": "6",
+        "body": "विश्वको सबैभन्दा अग्ले भवन कुन हो ? यसको नाम र यो रहेको स्थान भन्नुहोस ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "बुर्ज खलिफा / दुवई",
         "published": false,
         "shifted": false
     },
     {
-        "id": 7,
-        "body": "नेपालको इतिहासमा धनकुटे महाराज भनेर कसलाई चिनिन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "देव शमशेर",
-            "b": "चन्द्र शमशेर",
-            "c": "वीर शमशेर",
-            "d": "भिम शमशेर "
+        "id": "7",
+        "body": "निर्देशक श्री अशोक घिमीरे ज्यू यस कार्यालयको कति औं कार्यालय प्रमुख हुनुहुन्छ ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "३२ औं",
         "published": false,
         "shifted": false
     },
     {
-        "id": 8,
-        "body": "नेपाल राष्ट्र बैंकका वर्तमान गभर्नर श्री महाप्रसाद अधिकारी गभर्नरमा नियुक्त भएको मिति कहिले हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "१५ चैत्र २०७६",
-            "b": "१८ चैत्र २०७६",
-            "c": "२४ चैत्र २०७६",
-            "d": "२६ चैत्र २०७६"
+        "id": "8",
+        "body": "IPL 2023 क्रिकेट म्याचमा अन्तिम ५ बलमा ५ वटा छक्का हानेर आफ्नो टिमलाइ विजयी बनाउने भारतीय क्रिकेटर र तिनको टिमको नाम भन्नुहोस ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "c",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "रिन्कु सिंह / KKR (KOLAKATA KNIGHT RIDER )",
         "published": false,
         "shifted": false
     },
     {
-        "id": 9,
-        "body": "नेपाल राष्ट्र बैंक भन्दा पहिले कुन संस्थाले नोट निष्काशनको काम गर्दथ्यो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "टक्सार विभाग",
-            "b": "सदर मुलुकी खाना",
-            "c": "अर्थ मन्त्रालय",
-            "d": "तेजारथ अड्डा"
+        "id": "9",
+        "body": "हालै  भित्राइएको यस कार्यालयको बसको क़ो पुरा नम्बर भन्नुहोस ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "c",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "बागमती प्रदेश ०१/४क १५५७",
         "published": false,
         "shifted": false
     },
     {
-        "id": 10,
-        "body": "विश्व स्वास्थ्य संगठन (WHO) का वर्तमान् महानिर्देशकको नाम के हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "Dr. Tedros Adhanom Ghebreyesus",
-            "b": "Dr. Christine Lagard",
-            "c": "Dr. Boris Jhonson ",
-            "d": "Dr. Antonio Guterres"
+        "id": "10",
+        "body": "लोक सेवा अयोगका प्रथम अध्यक्ष को थिए ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "अनिरुद्र प्रसाद सिंह",
         "published": false,
         "shifted": false
     },
     {
-        "id": 11,
-        "body": "IMF का वर्तमान् प्रमुख को हुनुहुन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "Christalina Georgieva ",
-            "b": "Tony Morrison",
-            "c": "Michael Kruiz",
-            "d": "Anthony Blair"
+        "id": "11",
+        "body": "तरल धातु  भनेर कुन धातुलाइ चिनिन्छ । उक्त धातुको पेरियोडिक सिम्बल के हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "पारो (Mercury) / Hg",
         "published": false,
         "shifted": false
     },
     {
-        "id": 12,
-        "body": "जयनगर जनकपुर कुर्था रेलवेको लम्बाई कति किलोमिटर छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "३५ किलोमिटर",
-            "b": "४० किलोमिटर",
-            "c": "४५ किलोमिटर",
-            "d": "५० किलोमिटर"
+        "id": "12",
+        "body": "जानकी मन्दिर कसले र कहिले निर्माण गर्न लगाएको हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "रानी वृषभानु / इ.सं.१९१० (वि.सं. १९६७)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 13,
-        "body": "पल्पसा क्याफे भन्ने पुस्तकका लेखक को हुन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "भिमनिधि तिावरी",
-            "b": "नारायण वाग्ले",
-            "c": "मधुनिधि तिवारी",
-            "d": "राजन मुकारुङ्ग"
+        "id": "13",
+        "body": "मोवाईलमा प्रयोग गरिने SIM को पुरा रुप भन्नुहोस ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "Subscriber Identification Modules",
         "published": false,
         "shifted": false
     },
     {
-        "id": 14,
-        "body": "मानिसको मुटु प्रत्यारोपण गर्ने प्रथम डाक्टर को हुन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "Dr. Christian Bernhardt",
-            "b": "Dr. Robert Kotch",
-            "c": "Dr. Anthony Jhonson",
-            "d": "Dr. Arthur Louis"
+        "id": "14",
+        "body": "नेपालमा सबैभन्दा उचाइमा रहेको जिल्ला सदरमुकामको नाम भन्नुहोस ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "सिमीकोट (कालिकोट जिल्ला)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 15,
-        "body": "The Lady With the Lamp भनेर कसलाई भनिन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "Florence Nightingale",
-            "b": "Margarate Thathcer",
-            "c": "Alen Church",
-            "d": "Princess Catherine"
+        "id": "15",
+        "body": "एक लोपोन्मुख चरा सन १८२९ पछि २१डिसेम्बर२०२१ मा  चरा विद् देवेन्द्र खरेलले नेपालको इलाममा पुन फेलापारेका थिए । त्यो चराको नाम भन्नुहोस ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "होमराइ (Homrai / Rufous Necked Hornbil)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 16,
-        "body": "नेपाल अधिराज्यको संविधान, २०४७ का संविधान सुझाव आयोगको अध्यक्ष को थिए ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "विश्वनाथ उपाध्याय",
-            "b": "केदारनाथ उपाध्याय",
-            "c": "मिनबहादुर रायमाझी",
-            "d": "कृष्णजङ्ग रायमाझी"
+        "id": "16",
+        "body": "नेपाली भाषाको पहिलो चलचित्र कुन हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "आमा ( सन् १९६४ मा बनेको थियो ।)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 17,
-        "body": "मितेरी भञ्ज्याङ्ग भन्नाले कुन ठाउँलाई बुझिन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "चीन र भियतनामले युद्धबन्दी साटेको ठाऊँ",
-            "b": "भारत र चीनको सीमा रेखा",
-            "c": "भारत र पाकिस्तान बिचको सीमा रेखा",
-            "d": "थाईल्याण्ड लाओस बिचको सीमा"
+        "id": "17",
+        "body": "बुकर प्राईज (Booker Prize) २०२२ पाउने The Seven Moons of Maali almedia का लेखक को हुन् ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "शेहन करुणातिलक (श्रीलंका)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 18,
-        "body": "झोलुङ्गे पुलको जिल्ला भनेर कुन जिल्लालाई चिनिन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "पर्वत",
-            "b": "वागलुङ्ग",
-            "c": "म्याग्दी",
-            "d": "डोल्पा"
+        "id": "18",
+        "body": "हालसम्म म्यागासेसे (Magsaysay) पुरस्कार पाउने ४ जना नेपालीहरुको नाम भन्नुहोस् ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "महेशचन्द्र रेग्मी/भारतदत्त कोइराला/सन्दुक रुइत/महावीर पुन",
         "published": false,
         "shifted": false
     },
     {
-        "id": 19,
-        "body": "३८ प्यारालल भन्नाले उत्तर र दक्षिण कोरियको सीमा रेखालाई चिनिन्छ भने ४९ प्यारालल भन्नाले कुन २ देश बिचको सीमा रेखालाई चिनिन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "क्यानाडा र संयुक्त राज्य अमेरीका",
-            "b": "उत्तर र दक्षिण कोरिया",
-            "c": "भियतनाम र क्याम्बोडिया",
-            "d": "जर्मनी र स्वीजरल्याण्ड"
+        "id": "19",
+        "body": "नेपालमा अदुवा खेतीको लागि प्रसिद्ध जिल्ला कुन हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "सल्यान",
         "published": false,
         "shifted": false
     },
     {
-        "id": 20,
-        "body": "नेपालको जस्तै आकार भएको देश कुन हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "पोर्चुगल",
-            "b": "ईटली",
-            "c": "माल्टा",
-            "d": "चिली"
+        "id": "20",
+        "body": "INTERPOL को स्थापना कहिले भएको थियो र यसको Headquater कुन देशमा रहेको छ ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "1956 AD/  France (lyon)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 21,
-        "body": "“के हो ठूलो जगतमा, बुद्धि विवेक, उद्देश्य के लिनु, उडी छुनु चन्द्र एक” यो भनाई कसको हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "लक्ष्मी प्रसाद देवकोटा",
-            "b": "भिमनिधि तिवारी",
-            "c": "युधिर शमशेर थापा",
-            "d": "बालकृष्ण सम"
+        "id": "21",
+        "body": "नेपाल राष्ट्र बैंकले विदेशी विनिमय विभागले Cryptocurrency कारोबार गैर कानुनी रहेको सूचना कुन मितिमा  जारी गरेको थियो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "२०७८ /०५/२४ (नोटः२०७४/४/२९मा bitcoin को सूचना)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 22,
-        "body": "“ज्ञान मर्दछ हाँसेर, रोई विज्ञान मर्दछ” यो भनाई कसको हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "बालकृष्ण सम",
-            "b": "धुचन्द गौतम",
-            "c": "तुलसी दिवस",
-            "d": "बानिरा गिरी"
+        "id": "22",
+        "body": "कहाँ ४ दिनको १ हप्ता मान्ने चलन रहेको छ ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "तिब्वत",
         "published": false,
         "shifted": false
     },
     {
-        "id": 23,
-        "body": "नेपालमा नेपाल राष्ट्र बैंकको संयोजनमा आयोजना गरिएको ग्लोबल मनि विक २०२२ को नारा के रहेको थियो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "Build your future, be smart about money",
-            "b": "Build your life, earn now",
-            "c": "Build Your future, earn smartly",
-            "d": "Build nation, earn sustainably"
+        "id": "23",
+        "body": "दरबार हाईस्कुलको स्थापना भएको मिति भन्नुहोस् (वि.सं.मा) ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "वि.सं. १९१० असोज २७",
         "published": false,
         "shifted": false
     },
     {
-        "id": 24,
-        "body": "Interntional Green Cross का संस्थापक को हुन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "Mikhail Gorvachov",
-            "b": "Edward Sovernatse",
-            "c": "Winston Churchill",
-            "d": "Magarate Thathcer"
+        "id": "24",
+        "body": "सिरुवा पर्व कुन जातीले मनाउने गर्छन ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "राजवंशी",
         "published": false,
         "shifted": false
     },
     {
-        "id": 25,
-        "body": "नेपाल राष्ट्र बैंकद्धारा प्रकाशित तथ्यांक अनुसार चालु आ.व.को प्रथम आठ महीनामा कुल व्यापार घाटा कति रहेको छ ? रु.करोड सम्म ",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "रु.११ खर्ब ६० अर्ब ९८ करोड",
-            "b": "रु.११ खर्ब ५० अर्ब ९० करोड",
-            "c": "रु.११ खर्ब ५० अर्ब ५५ करोड",
-            "d": "रु.११ खर्ब ६५ अर्ब ९८ करोड"
+        "id": "25",
+        "body": "सबैभन्दा बढि सगरमाथा आरोहण गर्ने व्यक्ति को हुन र उनले कति पटक सगरमाथाको सफल आरोहण गरे ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "कामी रीता शेर्पा/ २६ पटक (अन्तिम ७ मे २०२२)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 26,
-        "body": "नेपाल राष्ट्र बैंकद्धारा प्रकाशित तथ्यांक अनुसार चालु आ.व.को प्रथम आठ महीनामा कति रकम बरारबको भटमासको तेल निर्यात भएको छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "रु.४१ अर्ब ४० करोड",
-            "b": "रु.४२ अर्ब ४५ करोड",
-            "c": "रु. ४१ अर्ब ४५ करोड",
-            "d": "रु.४३ अर्ब ४० करोड"
+        "id": "26",
+        "body": "स्वेच्छाले संयुक्त राष्ट्र संघको सदस्यता त्याग्ने देशको नाम के हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "ईण्डोनेशिया",
         "published": false,
         "shifted": false
     },
     {
-        "id": 27,
-        "body": "नेपाल राष्ट्र बैंकद्धारा प्रकाशित तथ्यांक अनुसार चालु आ.व.को प्रथम आठ महीनामा निर्यात भएका प्रमुख ५ वस्तुहरु के के हुन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "सोयाबिन तेल, पाल्म तेल, पोलिष्टर यार्न, उनी गलैंचा, जुटका सामानहरु",
-            "b": "सोयाबिन तेल, अलैंची, उनी गलैंचा, पाल्म तेल, जुटका सामानहरु",
-            "c": "सोयाबिन तेल, अदुवा, उनी गलैंचा, अलैंची, पोलिष्टर यार्न",
-            "d": "सोयाबिन तेल, अलैची, पोष्टिर यार्न, जुटका सामानहरु, अदुवा"
+        "id": "27",
+        "body": "विश्वको सबैभन्दा लामो पदमार्ग (ट्रेकिग रुट) कुन हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "ग्रेट हिमालयन ट्रेल (१७०० कि.मी.)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 28,
-        "body": "विश्व प्रख्यात चलचित्र Titanic वास्तविक जहाज दुर्घटनामा आधारित भएर बनेको चलचित्र हो । अब भन्नुहोस Titanic जहाज दुर्घटना कुन मितिमा भएको थियो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "१४ अप्रिल १९१२",
-            "b": "१२ अप्रिल १९१२",
-            "c": "१४ अप्रिल १९१५",
-            "d": "१३ अप्रिल १९१३"
+        "id": "28",
+        "body": "प्रथम विश्व युद्धको समाप्ति कुन दिन र कुन सन्धिबाट भएको थियो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "भर्सिलेज सन्धि/ ११ नोभेम्वर १९१८",
         "published": false,
         "shifted": false
     },
     {
-        "id": 29,
-        "body": "एक दिवसीय अन्तर्राष्ट्रिय क्रिकेटमा सबभन्दा चाँडो शतक प्रहार गर्ने खेलाडी को हुन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "AB De Villiers",
-            "b": "CJ Anderson",
-            "c": "Sahid Afridi",
-            "d": "Mark Boucher"
+        "id": "29",
+        "body": "नेपालको सबैभन्दा ठुलो राजनितिक दल नेपाली कांग्रेसको प्रतिनिधि सभा र राष्ट्रिय सभामा कति कति जना सदस्यहरु रहेका छन् ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "८८ र १०",
         "published": false,
         "shifted": false
     },
     {
-        "id": 30,
-        "body": "एक दिवसीय क्रिकेटमा १०,००० रन पुरा गर्ने १४ जना खेलाडीहरुमा १८,४२६ रन बनाएर भारतका सचिन तेन्दुलकर पहिलो स्थानमा छन् भने दोश्रो स्थानमा कुन खेलाडी रहेका छन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "कुमार संगाकारा १४,२३४",
-            "b": "राहुल द्रविड १४,३५६",
-            "c": "सौरभ गांगुली १३,४५६",
-            "d": "ब्रायन लारा १४,३५६"
+        "id": "30",
+        "body": "सबैभन्दा बढि स्थानीय निकाय भएको जिल्ला कुन हो र यस जिल्लामा कतिवटा स्थानीय निकायहरु रहेका छन् ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "सर्लाही/२० वटा (११ न.पा. र ९ गा.पा.)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 31,
-        "body": "राष्ट्रिय जनगणना २०७८ को प्रारम्भिक नतीजा अनुसार नेपालको कुल जनसंख्या कति रहेको छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "२,९१,९२,४८०",
-            "b": "२,९१,९३,८६४",
-            "c": "२,९१,७५,५३५",
-            "d": "२,९२, ९१,४८०"
+        "id": "31",
+        "body": "The Lucky Country भनेर कुन देशलाई चिनिन्छ ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "अष्ट्रेलिया",
         "published": false,
         "shifted": false
     },
     {
-        "id": 32,
-        "body": "आगामाी वैशाख ३० गते सम्पन्न हुन गईरहेको स्थानीय तहको निर्वाचनमा जम्मा कति जना मतदाताहरु रहेका छन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "१,७८,३३,७२३",
-            "b": "१,७७,३३,७२३",
-            "c": "२,७८,३३,७२३",
-            "d": "२,७७,३३,७२३"
+        "id": "32",
+        "body": "The Land of Smiles भनेर कुन देशलाई चिनिन्छ ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "थाईल्याण्ड",
         "published": false,
         "shifted": false
     },
     {
-        "id": 33,
-        "body": "स्थानीय तहको निर्वाचन २०७९ का लागि जम्मा कति राजनीतिक दलहरुले दल दर्ता गारएका छन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "७९ वटा",
-            "b": "८० वटा",
-            "c": "८९ वटा",
-            "d": "६९ वटा"
+        "id": "33",
+        "body": "नेपालमा सबैभन्दा धेरै क्षेत्रफल भएको नगरपालिका कुन हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "शितगंगा नगरपालिका (अर्घाखाँची६१०.४२व.कि.मी.)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 34,
-        "body": "ब्याडमिन्टन खेलमा प्रयोग गरिने नेटको उचाई जमिनदेखि कति अग्लो हुन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "५ फिट १ ईन्च",
-            "b": "५ फिट",
-            "c": "५ फिट २ ईन्च",
-            "d": "५ फिट ३ ईन्च"
+        "id": "34",
+        "body": "नेपालको कुन हिमाललाई आधार मानेर प्रमाणिक समय निर्धारण गरिएको छ ? कुन साल देखि UTC+5:45 समय निर्धारण गरिएको हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "गौरिशंकर हिमाल/ सन् १९८६ (",
         "published": false,
         "shifted": false
     },
     {
-        "id": 35,
-        "body": "ICC ले निर्धारण गरे अनुसार पुरुष क्रिकेट खेलमा प्रयोग हुने क्रिकेट बलको तौल कति हुन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "१५५.९–१६३ ग्राम",
-            "b": "१५६–१६० ग्राम",
-            "c": "१५७– १६५ ग्राम",
-            "d": "१५४.५–१७४ ग्राम"
+        "id": "35",
+        "body": "सस्कृतका महाकवि कालिदासको प्रथम नाम के थियो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "निलकन्दन",
         "published": false,
         "shifted": false
     },
     {
-        "id": 36,
-        "body": "IPL खेल्ने नेपालका एक मात्र खेलाडी सन्दीप लामिछानेले दिल्ली डेयर डेभिल्सबाट डेब्यु गर्दा कुन खेलाडीको विकेट लिएका थिए ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "पार्थीव पटेल",
-            "b": "मुनाफ पटेल",
-            "c": "विराट कोह्ली",
-            "d": "हार्दिक पाण्डेया"
+        "id": "36",
+        "body": "नेपालले पहिलो पटक कहिले भू-उपग्रह प्रक्षेपणा गर्यो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "वि.सं.२०७६ बैसाख ५",
         "published": false,
         "shifted": false
     },
     {
-        "id": 37,
-        "body": "नेपाल सरकारले पेश गरेको प्रतिस्थापन विधेयक अनुसार कुल बाँडफाँड गरिएको बजेट रकम कति छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "रु.१६ खर्ब १५ अर्ब ३३ करोड",
-            "b": "रु.१६ खर्ब ३२ अर्ब ८३ करोड",
-            "c": "रु.१६ खर्ब १७ अर्ब ३४ करोड",
-            "d": "रु.१६ खर्ब ३० अर्ब ८० करोड"
+        "id": "37",
+        "body": "दोश्रो विश्व युद्धमा जापानको हिरोसिमा र नागाशाकिमा Atom Bomb प्रहार गर्दा दुवैपटक Target मा परेर पनि जोगिएको शहर कुन हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "कोकुरा",
         "published": false,
         "shifted": false
     },
     {
-        "id": 38,
-        "body": "संयुक्त राष्ट्र संघका वर्तमान महासचिव (Secretary General) को हुनुहुन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "Antonio Guterres",
-            "b": "Dag Hammerkshold",
-            "c": "Kofi Annan",
-            "d": "Banki Moon"
+        "id": "38",
+        "body": "नेपालको राष्ट्रिय गानमा कतिवटा शब्दहरु रहेका छन् ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "४६ शब्दहरु (१२८ अक्षरहरु)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 39,
-        "body": "प्रदेश नं. २ लाई कुन मिति देखि मधेश प्रदेश नामाकरण गरियो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "३ माघ २०७८",
-            "b": "२ माघ २०७८",
-            "c": "१ माघ २०७८",
-            "d": "५ माघ २०७८"
+        "id": "39",
+        "body": "बम्बईको परिवर्तित नाम मुम्बई भने जस्तै राजशाहीको परिवर्तित नाम के हो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "ईश्लामावाद",
         "published": false,
         "shifted": false
     },
     {
-        "id": 40,
-        "body": "बैंक तथा वित्तीय संस्थाहरुले वित्तीय विवरण तयार गर्दा नउठ्ने कर्जाको रकमलाई  NFRS बमोजिम के शिर्षकमा लेखांकन गर्नुपर्दछ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "Impairment Charge",
-            "b": "Loan Loss Charge",
-            "c": "Asset Loss Charge",
-            "d": "Revaluation Charge"
+        "id": "40",
+        "body": "शुद्ध पानीको PH Level कति हुन्छ ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "७",
         "published": false,
         "shifted": false
     },
     {
-        "id": 41,
-        "body": "जापानको पुरानो नाम के हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "मञ्चुरिया",
-            "b": "फर्मोसा",
-            "c": "निप्पोन",
-            "d": "फुजीयामा"
+        "id": "41",
+        "body": "कोशी ब्यारेजको पुलको डिजाईन र निर्माण कुन कंपनिले गरेको थियो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "c",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "Joseph and Company Limited",
         "published": false,
         "shifted": false
     },
     {
-        "id": 42,
-        "body": "हाल विश्वमा प्रचलनमा रहेका बैंक नोटहरु मध्ये सबभन्दा बढी हानीकारक कीटाणु भएको नोट कुन देशको हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "अमेरीका",
-            "b": "ताईवान",
-            "c": "फिलीपिन्स",
-            "d": "क्यानाडा"
+        "id": "42",
+        "body": "सिलोन (Ceylon)  र सियाम (Siam) कुन कुन देशहरुको पुरानो नामहरु हुन् ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "d",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "श्रीलंका र थाईल्याण्ड",
         "published": false,
         "shifted": false
     },
     {
-        "id": 43,
-        "body": "नेपाली नोटमा दस्तखत गर्ने प्रथम व्यक्ति को हुन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "पण्डित जनकराज पाण्डे",
-            "b": "पण्डित भरतराज पाण्डे",
-            "c": "पण्डित नरेन्द्रराज पाण्डे",
-            "d": "पण्डित नयनराज पाण्डे"
+        "id": "43",
+        "body": "City of Flowers भन्नेर कुन शहरलाई चिनिन्छ ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "पेशावर (पाकिस्तान)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 44,
-        "body": "नेपाललाई कहिलेदेखि गणतन्त्र घोषणा गरियो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "२०६४ जेठ १५",
-            "b": "२०६५ जेठ १५",
-            "c": "२०६३ जेठ १५",
-            "d": "२०७२ असोज ३"
+        "id": "44",
+        "body": "सगरमाथालाइ चीन(तिब्बत)मा के नामले चिनिन्छ ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "कोमोलङ्गमा (Qomolangma)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 45,
-        "body": "नेपालको वर्तमान संविधानमा कति भाग र धाराहरु रहेका छन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "भाग ३५ र धारा २६०",
-            "b": "भाग ३५ र धारा ३०८",
-            "c": "भाग ३० र धारा ३०८",
-            "d": "भाग ४५ र धारा २६५"
+        "id": "45",
+        "body": "यहि २०८० साल बैसाख १० गते प्रतिनिधि सभाको उप निर्वाचन भएको निर्वाचन क्षेत्र नं. सहित जिल्लाहरुको नाम  भन्नुहोस् ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "बारा २/चितवन २/ तनहुँ १",
         "published": false,
         "shifted": false
     },
     {
-        "id": 46,
-        "body": "संघीय गणतन्त्र नेपालमा सबभन्दा बढी जिल्ला भएको प्रदेश कुन हो र कति जिल्लाहरु छन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "प्रदेश १, जिल्ला १५",
-            "b": "प्रदेश १, जिल्ला १४",
-            "c": "बागमती प्रदेश ३, १३ जिल्ला",
-            "d": "गण्डकी प्रदेश, जिल्ला ११"
+        "id": "46",
+        "body": "गैर सैनिक हवाई अपहरण तथा बन्धक बनाउने समुह विरुद्ध संसारमा हालसम्म कै चर्चित सफल सैनिक कार्यवाही Operation Thunderbolt कुन देशले कँहा संचालन गरेको थियो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "ईजरायले युगाण्डामा (Antebe Airport)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 47,
-        "body": "नेपालको इतिहासमा जुगले मागेको नेता भनेर कसलाई भनिन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "विश्वेश्वरप्रसाद कोईराला",
-            "b": "गणेशमान सिंह",
-            "c": "जंगबहादुर राणा",
-            "d": "राजा महेन्द्र"
+        "id": "47",
+        "body": "फिफा विश्वकप फुटबल प्रतियोगिता भएको कतारको स्टेडियमको नाम के थियो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "c",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "Lusail (लुसाईल)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 48,
-        "body": "वित्तीय संस्थाहरु र समग्र वित्तीय प्रणालीको सुरक्षा र स्थायीत्वका लागि जोखिम नियन्त्रण गर्दै पुँजी पर्याप्ततालाई केन्द्रमा राखी बैंक तथा वित्तीय संस्थाहरुलाई  नियमन गर्नुलाई के भनिन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "विवेकशील नियमन",
-            "b": "स्थायी नियमन",
-            "c": "वृहत नियमन",
-            "d": "अग्रगामी"
+        "id": "48",
+        "body": "फिफा विश्वकप फुटबल प्रतियोगिता २०२७ मा कतिवटा टिमहरु समावेश हुनेछन् ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "४८ वटा",
         "published": false,
         "shifted": false
     },
     {
-        "id": 49,
-        "body": "मौद्रिक नीति २०७८/७९ को अर्ध वार्षिक समीक्षा अनुसार २०७८ पौष मसान्तमा बैंक तथा वित्तीय संस्थाको निक्षेप परिचालन कति रहेको छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "रु.४८ खर्ब ४८ अर्ब ४१ करोड",
-            "b": "रु.४७ खर्ब ४८ अर्ब ४१ करोड",
-            "c": "रु.४८ खर्ब ४७ अर्ब ४१ करोड",
-            "d": "रु. ४७ खर्ब ४१ अर्ब ४८ करोड"
+        "id": "49",
+        "body": "मस्नवी कविता संग्रह लेख्ने प्रसिद्ध सुफी कविको नाम भन्नुहोस् ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "रुमी (अफगानस्तानको Balkh)",
         "published": false,
         "shifted": false
     },
     {
-        "id": 50,
-        "body": "१७ औं एशियाड कुन देशको कहाँ हुँदैछ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "चीनको हाङ्गजौ (झेजियाङ्ग)",
-            "b": "कोरियाको बुसान",
-            "c": "जापानको टोकियो",
-            "d": "चीनको ग्वाङ्गजाउ"
+        "id": "50",
+        "body": "यसै वर्ष सन् २०२३मा डाक्टर सन्दुक रुइतले वहराइनमा पाएको पुरस्कारको नाम भन्नुहोस् ।",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "Isa Award for Service to Humanity",
         "published": false,
         "shifted": false
     },
     {
-        "id": 51,
-        "body": "नेपालको दोश्रो अन्तर्राष्ट्रिय विमानस्थल कुन मिति देखि सञ्चालनमा आयो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "२०७८ वैशाख ५",
-            "b": "२०७८ वैशाख ८",
-            "c": "२०७८ वैशाख १",
-            "d": "२०७८ व्रशाख ९"
+        "id": "51",
+        "body": "नेपाल राष्ट्र बैंकले आज प्रकाशित गरेको विदेशी मुद्राको खरिद तथा विक्री दरको सूचनामा अमरिकी डलरको खरिद तथा विक्री दर कति कति छ ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "b",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "",
         "published": false,
         "shifted": false
     },
     {
-        "id": 52,
-        "body": "MCC पारित भएको मिति कहिले हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "२०७८ फागुन १५ गते",
-            "b": "२०७८ फागुन १६ गते",
-            "c": "२०७८ फागुन १२ गते",
-            "d": "२०७८ फागुन १३ गते"
+        "id": "52",
+        "body": "Digital Device कुन Number System मा काम गर्छन् ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "Binary Number System",
         "published": false,
         "shifted": false
     },
     {
-        "id": 53,
-        "body": "FATF को प्रधान कार्यालय कहाँ रहेको छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "पेरिस",
-            "b": "जेनेभा",
-            "c": "बोन",
-            "d": "न्युयोर्क"
+        "id": "53",
+        "body": "SLF को पुरारुप भन्नुहोस् । यसको वर्तमान दर (Current Rate) कति छ ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "Standing Liquidity Facility , ८.५%",
         "published": false,
         "shifted": false
     },
     {
-        "id": 54,
-        "body": "आधिकारिक र विश्सनीय श्रोत नभई आकर्षक शिर्षक दिई पाठकहरुको ध्यान आकृष्ठ गर्ने दृष्टिकोणले लेखिने समाचारलाई के भनिन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "पित्त पत्रकारिता",
-            "b": "लोकप्रिय पत्रकारिता",
-            "c": "सामाजिक पत्रकारिता",
-            "d": "सनसनीपूर्ण पत्रकारिता"
+        "id": "54",
+        "body": "२०५८ साल जेठ १९ गते भएको दरबार हत्याकाण्डमा राजपरिवारका कति जना सदस्यहरुको हत्या भएको थियो ?",
+        "type": "TEXT_ANSWER",
+        "extra": {
+            "type": "",
+            "resource": ""
         },
-        "correct_option": "a",
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "९ जना",
         "published": false,
         "shifted": false
     },
     {
-        "id": 55,
-        "body": "",
-        "type": "MCQ_TEXT_PHOTO",
+        "id": "55",
+        "body": "चित्रमा देखाइएकाे ब्यक्तिको नाम के हो र उनी को हुन ?",
+        "type": "TEXT_PHOTO",
         "extra": {
             "type": "PHOTO",
-            "resource": "assets/bodys/1..png"
+            "resource": "/assets/Questions/55.jpg"
         },
         "options": {
             "a": "",
@@ -769,17 +985,53 @@
             "c": "",
             "d": ""
         },
-        "correct_option": "a",
+        "correct_option": "Antenio Guterres /UN Secretary",
         "published": false,
         "shifted": false
     },
     {
-        "id": 56,
-        "body": "",
-        "type": "MCQ_TEXT_PHOTO",
+        "id": "56",
+        "body": "यो Video कुन फिल्मको हो ? फिल्मको नाम भन्नुहोस ।",
+        "type": "TEXT_VIDEO",
+        "extra": {
+            "type": "VIDEO",
+            "resource": "/assets/Questions/56.mp4"
+        },
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "आनन्द",
+        "published": false,
+        "shifted": false
+    },
+    {
+        "id": "57",
+        "body": "यी गायीकाको नाम के हो ?",
+        "type": "TEXT_VIDEO",
+        "extra": {
+            "type": "VIDEO",
+            "resource": "/assets/Questions/57.mp4"
+        },
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "मैथिलि ठाकुर",
+        "published": false,
+        "shifted": false
+    },
+    {
+        "id": "58",
+        "body": "यी फोटोमा को हुन् चिन्नुहोस ।",
+        "type": "TEXT_PHOTO",
         "extra": {
             "type": "PHOTO",
-            "resource": "assets/bodys/2..png"
+            "resource": "/assets/Questions/58.webp"
         },
         "options": {
             "a": "",
@@ -787,17 +1039,35 @@
             "c": "",
             "d": ""
         },
-        "correct_option": "a",
+        "correct_option": "Kamala Harris",
         "published": false,
         "shifted": false
     },
     {
-        "id": 57,
-        "body": "",
-        "type": "MCQ_TEXT_PHOTO",
+        "id": "59",
+        "body": "यी गीतका रचनाकार को हुन् ?",
+        "type": "TEXT_VIDEO",
+        "extra": {
+            "type": "VIDEO",
+            "resource": "/assets/Questions/59.mp4"
+        },
+        "options": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "correct_option": "भूपी शेरचन",
+        "published": false,
+        "shifted": false
+    },
+    {
+        "id": "60",
+        "body": "यी तस्विरमा देखाइएका व्यक्ती को पद र नाम भन्नुहाेस।",
+        "type": "TEXT_PHOTO",
         "extra": {
             "type": "PHOTO",
-            "resource": "assets/bodys/3..png"
+            "resource": "/assets/Questions/60.jpg"
         },
         "options": {
             "a": "",
@@ -805,153 +1075,7 @@
             "c": "",
             "d": ""
         },
-        "correct_option": "a",
-        "published": false,
-        "shifted": false
-    },
-    {
-        "id": 58,
-        "body": "",
-        "type": "MCQ_TEXT_PHOTO",
-        "extra": {
-            "type": "PHOTO",
-            "resource": "assets/bodys/4..png"
-        },
-        "options": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
-        },
-        "correct_option": "a",
-        "published": false,
-        "shifted": false
-    },
-    {
-        "id": 59,
-        "body": "",
-        "type": "MCQ_TEXT_PHOTO",
-        "extra": {
-            "type": "PHOTO",
-            "resource": "assets/bodys/5..png"
-        },
-        "options": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
-        },
-        "correct_option": "a",
-        "published": false,
-        "shifted": false
-    },
-    {
-        "id": 60,
-        "body": "",
-        "type": "MCQ_TEXT_PHOTO",
-        "extra": {
-            "type": "PHOTO",
-            "resource": "assets/bodys/6..png"
-        },
-        "options": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
-        },
-        "correct_option": "a",
-        "published": false,
-        "shifted": false
-    },
-    {
-        "id": 61,
-        "body": "",
-        "type": "MCQ_TEXT_PHOTO",
-        "extra": {
-            "type": "PHOTO",
-            "resource": "assets/bodys/7..png"
-        },
-        "options": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
-        },
-        "correct_option": "a",
-        "published": false,
-        "shifted": false
-    },
-    {
-        "id": 62,
-        "body": "",
-        "type": "MCQ_TEXT_PHOTO",
-        "extra": {
-            "type": "PHOTO",
-            "resource": "assets/bodys/8..png"
-        },
-        "options": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
-        },
-        "correct_option": "a",
-        "published": false,
-        "shifted": false
-    },
-    {
-        "id": 63,
-        "body": "नेपाल राष्ट्र बैंकका गभर्नरहरुमा वर्तमान गभर्नर श्री महाप्रसाद अधिकारी कतिऔं गभर्नर हुनुहुन्छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
-        },
-        "correct_option": "a",
-        "published": false,
-        "shifted": false
-    },
-    {
-        "id": 64,
-        "body": "रु.२ को नोटमा कुन जनावरको चित्र अंकित छ ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
-        },
-        "correct_option": "a",
-        "published": false,
-        "shifted": false
-    },
-    {
-        "id": 65,
-        "body": "नेपालको सबभन्दा ठूलो ताल कुन हो ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
-        },
-        "correct_option": "a",
-        "published": false,
-        "shifted": false
-    },
-    {
-        "id": 66,
-        "body": "हाल नेपालमा कति जिल्लाहरु रहेका छन् ?",
-        "type": "MCQ_TEXT",
-        "options": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
-        },
-        "correct_option": "a",
+        "correct_option": "चार्लस III",
         "published": false,
         "shifted": false
     }

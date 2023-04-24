@@ -4,6 +4,7 @@ import Groups from './Groups/Groups';
 import Header from './Header/Header';
 import Hystory from './History/History';
 import Options from './Options/Options';
+import Answer from './Answer/Answer';
 import Question from './Question/Question';
 import QuestionSelector from './QuestionSelector/QuestionSelector';
 import TimerControl from './TimerControl/TimerControl';
@@ -29,9 +30,10 @@ function Quiz() {
   const [timerRunning, setTimerRunning] = useState(false)
   const [seconds, setSeconds] = useState(0);
   const [questions, setQuestions] = useState([]);
+  const [answer, setAnswer] = useState("");
   const [groups, setGroups] = useState([{
-    group_id: 1,
-    group_name: 'Sample Group',
+    id: 1,
+    name: 'Sample Group',
     turn: true,
     score: 0,
     members: [
@@ -45,7 +47,7 @@ function Quiz() {
   const [selectedQuestion, setSelQuestion] = useState({
     id: 0,
     body: "राष्ट्र गान, राष्ट्रिय सम्मान",
-    type: "MCQ_TEXT_AUDIO",
+    type: "TEXT_AUDIO",
     extra: {
       type: "AUDIO",
       resource: "assets/Audio/Sayau_thunga.mp3",
@@ -66,8 +68,16 @@ function Quiz() {
     },
   ]);
   const [turn, setTurn] = useState({
-    group_id: 1,
-    group_name: "First Group"
+    id: 1,
+    name: "First Group",
+    members: [
+      {
+        full_name: "Ajay Singh",
+        isLeader: true
+      }
+    ],
+    turn: true,
+    score: 0
   });
 
   //timer countdown code
@@ -79,6 +89,7 @@ function Quiz() {
     setSeconds(0);
     setTimerRunning(false)
     clearInterval(timer.current);
+    timer.current = 0;
   };
 
   const startTimer = useCallback(() => {
@@ -88,7 +99,7 @@ function Quiz() {
   }, [seconds]);
 
   const logger = useCallback((log: { msg: string; timestamp: string; }) => {
-    setEvents([...events, log]); //add new events to the array
+    setEvents([log, ...events]); //add new events to the array
     // console.log(events)
   }, [events]);
 
@@ -117,10 +128,8 @@ function Quiz() {
   const fetchGroups = useCallback(async () => {
     const res = await fetch(`${api_url}/${process.env.NEXT_PUBLIC_GROUPS_ROUTE}`);
     const data = await res.json();
-    setTurn({
-      group_id: data.id,
-      group_name: data.name
-    });
+    const turnGroup = data.filter((group) => group.turn)[0]
+    setTurn({ ...turnGroup })
     logger({
       msg: `Groups Fetched Successfully!`,
       timestamp: timestamp,
@@ -128,15 +137,21 @@ function Quiz() {
     return data;
   }, [api_url, logger, timestamp]);
 
-  const resetOptions = () => {
-    optionA.current.classList.remove('optionCorrect')
-    optionB.current.classList.remove('optionCorrect')
-    optionC.current.classList.remove('optionCorrect')
-    optionD.current.classList.remove('optionCorrect')
-    optionA.current.classList.remove('optionWrong')
-    optionB.current.classList.remove('optionWrong')
-    optionC.current.classList.remove('optionWrong')
-    optionD.current.classList.remove('optionWrong')
+  const resetOptions = (nonMCQ = true) => {
+    if (nonMCQ) {
+      //do reset for only one answer
+      console.log('Non MCQ Question')
+      return
+    } else {
+      optionA.current.classList.remove('optionCorrect')
+      optionB.current.classList.remove('optionCorrect')
+      optionC.current.classList.remove('optionCorrect')
+      optionD.current.classList.remove('optionCorrect')
+      optionA.current.classList.remove('optionWrong')
+      optionB.current.classList.remove('optionWrong')
+      optionC.current.classList.remove('optionWrong')
+      optionD.current.classList.remove('optionWrong')
+    }
   }
 
   //Utilities functions
@@ -146,9 +161,8 @@ function Quiz() {
       await setSelQuestion(
         questions.filter((question) => question.id === num)[0]
       );
-
       logger({
-        msg: `${turn.group_name} selects Question No. ${num}`,
+        msg: `${turn.name} selects Question No. ${num}`,
         timestamp: timestamp,
       });
 
@@ -201,12 +215,17 @@ function Quiz() {
     setShowAudQuiz(true);
   };
 
-  const checkAnswer = (e: Event) => {
+  const checkAnswer = (e: Event, nonMCQ = true) => {
+    if(nonMCQ === true){
+      e.target.innerHTML = `Answer: ${selectedQuestion.correct_option}`
+      return
+    }
     stopTimer();
     let optionHoler = e.target
     let option = optionHoler.innerHTML;
+    console.log(selectedQuestion.type)
     logger({
-      msg: `${turn.group_name} answered ${option === selectedQuestion.correct_option ? "correct" : "incorrect"} Option ${option}`,
+      msg: `${turn.name} answered ${option === selectedQuestion.correct_option ? "correct" : "incorrect"} Option ${option}`,
       timestamp: timestamp,
     });
     option = option.split(")")[0].toLowerCase();
@@ -222,26 +241,26 @@ function Quiz() {
 
   const shiftTurn = useCallback((ans: boolean) => {
     let grps = groups
-    if (grps && turn?.group_id >= 0) {
+    if (grps && turn?.id >= 0) {
       let nxtGrp = 0
-      grps[turn?.group_id - 1].turn = false
+      grps[turn?.id - 1].turn = false
       if (lastID === 0 && ans) {
         //case for original team answers the question correctly
-        nxtGrp = turn.group_id >= grps.length ? 1 : turn.group_id + 1
-        grps[turn.group_id - 1].score += 10
+        nxtGrp = turn.id >= grps.length ? 1 : turn.id + 1
+        grps[turn.id - 1].score += 10
         console.log('original team answers correctly for 10 marks')
       } else if (lastID === 0 && !ans) {
         //case for original ask fails
-        setLastID(turn.group_id)
+        setLastID(turn.id)
         setSeconds(15)
         startTimer()
-        nxtGrp = turn.group_id >= grps.length ? 1 : turn.group_id + 1
+        nxtGrp = turn.id >= grps.length ? 1 : turn.id + 1
         console.log("original team can't answers correctly for 10 marks")
       } else if (lastID !== 0 && ans) {
         //case for bonus question answered
         nxtGrp = lastID >= grps.length ? 1 : parseInt(lastID) + 1
-        grps[turn.group_id - 1].score += 5
-        console.log(`${grps[turn.group_id - 1].group_name} answered bonus question`)
+        grps[turn.id - 1].score += 5
+        console.log(`${grps[turn.id - 1].name} answered bonus question`)
         setLastID(0) //clearing bonus
       } else {
         nxtGrp = lastID >= grps.length ? 1 : parseInt(lastID) + 1
@@ -310,48 +329,39 @@ function Quiz() {
   const optionD = useRef();
 
   //Loading Questions
+  const getQuestions = async () => {
+    const questionsFromServer = await fetchQuestions();
+    setQuestions(questionsFromServer);
+  };
+
+  //Loading Groups
+  const getGroups = async () => {
+    const groupsFromServer = await fetchGroups();
+    setGroups(groupsFromServer);
+  };
+
+  //Loading Settings
+  const getSettings = async () => {
+    const settingsFromServer = await fetchSettings();
+    setSettings(settingsFromServer);
+    setQuizTitle(settingsFromServer.filter(setting => setting.key === 'TITLE')[0].value)
+    setquizMessage(settingsFromServer.filter(setting => setting.key === 'MESSAGE')[0].value)
+  };
+
   useEffect(() => {
-    const getQuestions = async () => {
-      const questionsFromServer = await fetchQuestions();
-      setQuestions(questionsFromServer);
-    };
     if (!api_url) return
     getQuestions()
     logger({
       msg: `Questions Loaded Successfully!`,
       timestamp: timestamp,
     });
-  }, []);
 
-  //Loading Groups
-  useEffect(() => {
-    const getGroups = async () => {
-      const groupsFromServer = await fetchGroups();
-      setGroups(groupsFromServer);
-      if (groups.length) {
-        // setTurn(groups.filter((group) => group.turn === true)[0]);
-        setTurn(groups.filter((group) => group.turn === true)[0]);
-      } else {
-        console.log(groups)
-      }
-    };
-    if (!api_url) return
     getGroups();
     logger({
       msg: `Groups Loaded Successfully!`,
       timestamp: timestamp,
     });
-  }, []);
 
-  //Loading Settings
-  useEffect(() => {
-    const getSettings = async () => {
-      const settingsFromServer = await fetchSettings();
-      setSettings(settingsFromServer);
-      setQuizTitle(settingsFromServer.filter(setting => setting.key === 'TITLE')[0].value)
-      setquizMessage(settingsFromServer.filter(setting => setting.key === 'MESSAGE')[0].value)
-    };
-    if (!api_url) return
     getSettings();
     logger({
       msg: `Settings Loaded Successfully!`,
@@ -359,6 +369,22 @@ function Quiz() {
     });
   }, []);
 
+
+  useEffect(() => {
+    console.log(`groups changed:`)
+    if (groups.length) {
+      setTurn(groups.filter((group) => group.turn === true)[0]);
+    } else {
+      console.log(groups)
+    }
+    console.log(`turn set to ${turn.name}`)
+  }, [groups])
+
+  useEffect(() => {
+    console.log(`question changed:`)
+    setAnswer(selectedQuestion.correct_option)
+    console.log(`answer set for question no ${selectedQuestion.id}`)
+  }, [selectedQuestion])
 
   //running timer
   useEffect(() => {
@@ -372,7 +398,7 @@ function Quiz() {
   //Main App Container
   return (
     <div className={quizStyle.quizContainer}>
-      <Header title={ quizTitle } message={ quizMessage } />
+      <Header title={quizTitle} message={quizMessage} />
       {showAudQuiz ? <Modal setShowAudQuiz={setShowAudQuiz} /> : null}
       <div className={quizStyle.quizBody}>
         <aside className={quizStyle.leftSideBar}>
@@ -389,14 +415,22 @@ function Quiz() {
             />
           </section>
           <section className={quizStyle.optionsArea}>
-            <Options
-              options={selectedQuestion.options}
-              checkOption={checkAnswer}
-              optionA={optionA}
-              optionB={optionB}
-              optionC={optionC}
-              optionD={optionD}
-            />
+            {(selectedQuestion.type.includes('MCQ')) &&
+              <Options
+                options={selectedQuestion.options}
+                checkOption={checkAnswer}
+                optionA={optionA}
+                optionB={optionB}
+                optionC={optionC}
+                optionD={optionD}
+              />
+            }
+            {(!selectedQuestion.type.includes('MCQ')) &&
+              <Answer
+                answer={"Answer: "}
+                checkOption={checkAnswer}
+              />
+            }
           </section>
         </main>
         <aside className={quizStyle.rightSideBar}>

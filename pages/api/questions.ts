@@ -14,7 +14,12 @@ async function getAllQuestions() {
         }
       })
       const { a, b, c, d } = optn[0]
-      return { ...question, options: { a, b, c, d }}
+      const extra = await prisma.extra.findMany({
+        where: {
+          questionId: question.id
+        }
+      })
+      return { ...question, options: { a, b, c, d }, extra: extra[0] }
     })
   )
   await prisma.$disconnect() 
